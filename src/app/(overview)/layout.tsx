@@ -1,3 +1,4 @@
+import { Navbar } from "@/components";
 
 export default function OverviewLayout({
  children
@@ -6,6 +7,7 @@ export default function OverviewLayout({
 }) {
   return (
     <main>
+    <Navbar/>
     {children}
     </main>
   );
