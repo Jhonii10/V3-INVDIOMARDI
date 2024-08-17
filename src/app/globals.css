@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .styles_link___3_ON:hover::after {
+    transform: scaleX(0.99) translateZ(0);
+  }
+
+  .styles_link___3_ON:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #85eae8;
+    transition: transform .65s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    transform: scaleX(0) translateZ(0);
+}
+}
