@@ -3,7 +3,40 @@
 import clsx from 'clsx';
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { CiLocationArrow1 } from 'react-icons/ci';
 import { IoMenuOutline, IoSearchOutline } from 'react-icons/io5'
+import { PiGridFourLight, PiSuitcaseSimpleThin, PiUsersThreeLight } from 'react-icons/pi';
+
+
+
+const DATA = [
+    {
+        name: 'Categorias',
+        icon: <PiGridFourLight  size={76} color='#85eae8'   />,
+        link: '/categories',
+
+    },
+    {
+        name: 'Ubicaciones',
+        icon: <CiLocationArrow1 size={76} color='#85eae8' />,
+        link: '/locations',
+
+    },
+    {
+        name: 'Nuestro equipo',
+        icon: <PiUsersThreeLight size={76} color='#85eae8'/>,
+        link: '/employes',
+
+    },
+    {
+        name: 'Oportunidades',
+        icon: <PiSuitcaseSimpleThin size={76} color='#85eae8' />,
+        link: '/job',
+
+    },
+    
+    
+]
 
 export const Navbar = () => {
 
@@ -44,7 +77,28 @@ export const Navbar = () => {
                         )}
                         style={{ '--left-space': '284.44375228881836px' } as React.CSSProperties}
                     >
-                       {/* todo: here options */}
+                       <div>
+                            <ul className='p-0 list-none flex flex-row items-start justify-center flex-wrap -mt-[1.25rem]'>
+                                {
+                                    DATA?.map((item , index) => (
+                                        <li key={index} className='mx-9 mt-7 text-center'>
+                                            <Link
+                                                href={item.link}
+                                                className='relative flex flex-col items-center justify-center no-underline text-current translate-z-0 min-w-[8rem] max-w-[12.5rem] pb-[0.625rem] styles_link___3_ON'
+                                            >
+                                                <div className='relative '>
+                                                    {item.icon}
+                                                </div>
+                                                <div className='mt-3 text-sm font-medium'>
+                                                    {item.name}
+                                                </div>
+                                            </Link>
+                                        </li>
+                                    ))
+                                }
+                                
+                            </ul>
+                       </div>
                     </div>
                 </li>
                 <li className='ml-4'>
