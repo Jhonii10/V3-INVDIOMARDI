@@ -1,4 +1,5 @@
-import { Navbar } from "@/components";
+import { Navbar, Sidebar } from "@/components";
+
 
 export default function OverviewLayout({
  children
@@ -8,6 +9,7 @@ export default function OverviewLayout({
   return (
     <main className="min-h-screen pt-24">
     <Navbar/>
+    <Sidebar/>
     <div className="px-4">
     {children}
     </div>

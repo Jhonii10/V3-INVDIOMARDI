@@ -1,50 +1,23 @@
 'use client';
 
+import { useUiStore } from '@/store';
 import clsx from 'clsx';
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { CiLocationArrow1 } from 'react-icons/ci';
 import { IoMenuOutline, IoSearchOutline } from 'react-icons/io5'
-import { PiGridFourLight, PiSuitcaseSimpleThin, PiUsersThreeLight } from 'react-icons/pi';
+import { Options } from './Options';
+import { menuItem } from '@/models';
 
 
-
-const DATA = [
-    {
-        name: 'Categorias',
-        icon: <PiGridFourLight  size={76} color='#85eae8'   />,
-        link: '/categories',
-
-    },
-    {
-        name: 'Ubicaciones',
-        icon: <CiLocationArrow1 size={76} color='#85eae8' />,
-        link: '/locations',
-
-    },
-    {
-        name: 'Nuestro equipo',
-        icon: <PiUsersThreeLight size={76} color='#85eae8'/>,
-        link: '/team',
-
-    },
-    {
-        name: 'Oportunidades',
-        icon: <PiSuitcaseSimpleThin size={76} color='#85eae8' />,
-        link: '/jobs',
-
-    },
-    
-    
-]
 
 export const Navbar = () => {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const openSideMenu = useUiStore(state => state.openSideMenu)
 
 
   return (
-    <header className='absolute z-10 top-0 left-0 w-full h-24 px-6 md:px-14 flex flex-row items-center justify-between bg-white '>
+    <header className='absolute z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between bg-white '>
         <div className='flex flex-row items-center justify-center'>
             <Link href={'/'} className='font-bold text-base'>
                 Inversiones Diomardi
@@ -56,7 +29,7 @@ export const Navbar = () => {
                     onMouseLeave={()=>setIsDropdownOpen(false)}
                     >
                     <Link href={'/resources'}
-                        
+                    onClick={()=>setIsDropdownOpen(false)}
                     >
                         <span
                             className={`relative inline-block pr-[1.125rem] after:content-[''] after:block after:absolute after:top-1/2 after:right-0 after:-mt-[0.1875rem] after:w-[0.625rem] after:h-[0.375rem] after:bg-[url('/images/arrow.svg')] after:bg-center after:bg-no-repeat after:bg-contain`}
@@ -78,26 +51,7 @@ export const Navbar = () => {
                         style={{ '--left-space': '284.44375228881836px' } as React.CSSProperties}
                     >
                        <div>
-                            <ul className='p-0 list-none flex flex-row items-start justify-center flex-wrap -mt-[1.25rem]'>
-                                {
-                                    DATA?.map((item , index) => (
-                                        <li key={index} className='mx-9 mt-7 text-center'>
-                                            <Link
-                                                href={item.link}
-                                                className='relative flex flex-col items-center justify-center no-underline text-current translate-z-0 min-w-[8rem] max-w-[12.5rem] pb-[0.625rem] styles_link___3_ON'
-                                            >
-                                                <div className='relative '>
-                                                    {item.icon}
-                                                </div>
-                                                <div className='mt-3 text-sm font-medium'>
-                                                    {item.name}
-                                                </div>
-                                            </Link>
-                                        </li>
-                                    ))
-                                }
-                                
-                            </ul>
+                        <Options data={menuItem} optionMenu={()=>setIsDropdownOpen(false)}/>
                        </div>
                     </div>
                 </li>
@@ -129,7 +83,10 @@ export const Navbar = () => {
                 >
                     {<IoSearchOutline size={24} />}
             </button>
-            <button className="appearance-none border-0 p-0 cursor-pointer flex lg:hidden flex-row items-center justify-center w-12 h-12 bg-cyan-200 rounded-full text-black">
+            <button 
+                className="appearance-none border-0 p-0 cursor-pointer flex lg:hidden flex-row items-center justify-center w-12 h-12 bg-cyan-200 rounded-full text-black"
+                onClick={openSideMenu}
+                >
                 {<IoMenuOutline size={20} />}
             </button>
         </div>
