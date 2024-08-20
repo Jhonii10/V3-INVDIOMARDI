@@ -25,13 +25,13 @@ const DATA = [
     {
         name: 'Nuestro equipo',
         icon: <PiUsersThreeLight size={76} color='#85eae8'/>,
-        link: '/employes',
+        link: '/team',
 
     },
     {
         name: 'Oportunidades',
         icon: <PiSuitcaseSimpleThin size={76} color='#85eae8' />,
-        link: '/job',
+        link: '/jobs',
 
     },
     
@@ -55,7 +55,7 @@ export const Navbar = () => {
                     onMouseEnter={()=>setIsDropdownOpen(true)}
                     onMouseLeave={()=>setIsDropdownOpen(false)}
                     >
-                    <Link href={'/resourses'}
+                    <Link href={'/resources'}
                         
                     >
                         <span
