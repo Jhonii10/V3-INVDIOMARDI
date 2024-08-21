@@ -22,3 +22,15 @@
     transform: scaleX(0) translateZ(0);
 }
 }
+
+&::-webkit-scrollbar {
+  width: 12px;
+}
+&::-webkit-scrollbar-track {
+  background: transparent;
+}
+&::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+  border: 3px solid #dfdfdf;
+  border-radius: 12px !important;
+}
