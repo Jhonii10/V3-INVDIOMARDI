@@ -3,10 +3,11 @@
 import { useUiStore } from '@/store';
 import clsx from 'clsx';
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoMenuOutline, IoSearchOutline } from 'react-icons/io5'
 import { Options } from './Options';
 import { menuItem } from '@/models';
+import { useScrollDirection } from '@/hooks';
 
 
 
@@ -15,9 +16,31 @@ export const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const openSideMenu = useUiStore(state => state.openSideMenu)
 
+    const scrollDirection = useScrollDirection({initialDirection:'down'});
+    const [scrolledToTop, setScrolledToTop] = useState(true);
+
+    const handleScroll = () => {
+        setScrolledToTop(window.scrollY < 50);
+      };
+    
+      useEffect(() => {
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, [scrolledToTop]);
+
+   
+
 
   return (
-    <header className='absolute z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between bg-white '>
+    <header  className={clsx('fixed z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between backdrop-blur-md transition-transform duration-500 ',{
+        'transform -translate-y-24 shadow-lg': scrollDirection === 'down' && !scrolledToTop,
+        'transform translate-y-0 shadow-none': scrollDirection === 'up' && scrolledToTop,
+        'shadow-lg': scrollDirection === 'up' && !scrolledToTop
+    })}>
         <div className='flex flex-row items-center justify-center'>
             <Link href={'/'} className='font-bold text-base'>
                 Inversiones Diomardi
