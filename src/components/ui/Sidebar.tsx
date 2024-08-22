@@ -59,7 +59,7 @@ export const Sidebar =  () => {
                 >
                     
                     <button 
-                        className="appearance-none border-0 p-0 cursor-pointer flex lg:hidden flex-row items-center justify-center w-12 h-12 bg-cyan-200 rounded-full text-black"
+                        className="appearance-none border-0 p-0 cursor-pointer flex lg:hidden flex-row items-center justify-center w-12 h-12 bg-[var(--primary-color-300)] rounded-full text-black"
                          onClick={closeSideMenu}
                         >
                         {<IoCloseOutline size={25} />}

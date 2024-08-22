@@ -63,8 +63,8 @@ export const Navbar = () => {
                     </Link>
                     <div
                         className={clsx(
-                            `absolute z-10 top-full left-0 w-full bg-cyan-100 py-16 px-10 transition-all duration-500 ease-linear
-                             before:content-[''] before:block before:absolute before:z-1 before:top-[-0.375rem] before:left-[var(--left-space)] before:-ml-[0.375rem] before:w-[0.75rem] before:h-[0.75rem] before:bg-cyan-100 before:rotate-45
+                            `absolute z-10 top-full left-0 w-full bg-[var(--primary-color-100)] py-16 px-10 transition-all duration-500 ease-linear
+                             before:content-[''] before:block before:absolute before:z-1 before:top-[-0.375rem] before:left-[var(--left-space)] before:-ml-[0.375rem] before:w-[0.75rem] before:h-[0.75rem] before:bg-[var(--primary-color-100)] before:rotate-45
                             `,
                             {
                                 'opacity-100 visible translate-y-0': isDropdownOpen,
@@ -107,7 +107,7 @@ export const Navbar = () => {
                     {<IoSearchOutline size={24} />}
             </button>
             <button 
-                className="appearance-none border-0 p-0 cursor-pointer flex lg:hidden flex-row items-center justify-center w-12 h-12 bg-cyan-200 rounded-full text-black"
+                className="appearance-none border-0 p-0 cursor-pointer flex lg:hidden flex-row items-center justify-center w-12 h-12 bg-[var(--primary-color-300)] rounded-full text-black"
                 onClick={openSideMenu}
                 >
                 {<IoMenuOutline size={20} />}

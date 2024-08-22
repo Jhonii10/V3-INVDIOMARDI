@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root{
+  --primary-color-950:#123a47;
+  --primary-color-900:#275867;
+  --primary-color-800:#286a7a;
+  --primary-color-700:#248095;
+  --primary-color-600:#239fb7;
+  --primary-color-500:#26c6da;
+  --primary-color-400:#4ecad8;
+  --primary-color-300:#26c6daa8;
+  --primary-color-200:#bef0f3;
+  --primary-color-100:#ddf8f9;
+  --primary-color-50:#f1fdfd;
+
+
+  --secondary-color-950:#151519;
+  --secondary-color-900:#1e1f26;
+  --secondary-color-800:#262738;
+  --secondary-color-700:#2c2e47;
+  --secondary-color-600:#282c5e;
+  --secondary-color-500:#263272;
+  --secondary-color-400:#5f79d1;
+  --secondary-color-300:#8ba6e2;
+  --secondary-color-200:#b7c9ee;
+  --secondary-color-100:#d7e2f5;
+  --secondary-color-50:#eaf0fa;
+
+
+  --third-color-950:#3d0c03;
+  --third-color-900:#711d0a;
+  --third-color-800:#8c210a;
+  --third-color-700:#b12902;
+  --third-color-600:#c83700;
+  --third-color-500:#e65100;
+  --third-color-400:#ff7317;
+  --third-color-300:#ffa65a;
+  --third-color-200:#ffcb99;
+  --third-color-100:#ffe7cd;
+  --third-color-50:#fff4e9;
+
+
+}
+
 @layer utilities {
   .styles_link___3_ON:hover::after {
     transform: scaleX(0.99) translateZ(0);
@@ -15,7 +58,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #85eae8;
+    background-color: var(--primary-color-300);
     transition: transform .65s;
     transition-delay: 0s;
     transition-timing-function: ease;
