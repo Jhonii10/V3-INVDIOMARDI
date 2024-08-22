@@ -19,7 +19,7 @@ export const Options = ({data , optionMenu}:Props) => {
                                                 className='relative flex flex-col items-center justify-center no-underline text-current translate-z-0  min-w-12 md:min-w-[8rem] max-w-[12.5rem] pb-[0.625rem] styles_link___3_ON'
                                                 onClick={optionMenu}
                                                 >
-                                                <div className='relative '>
+                                                <div className='relative text-[--primary-color-300]'>
                                                     {item.icon}
                                                 </div>
                                                 <div className='mt-3 text-sm font-medium'>
