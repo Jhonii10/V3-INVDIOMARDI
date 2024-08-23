@@ -7,12 +7,12 @@ export default function OverviewLayout({
  children: React.ReactNode;
 }) {
   return (
-    <main className="min-h-screen pt-24">
+    <div >
     <Navbar/>
     <Sidebar/>
-    <div className="px-4">
+    <main>
     {children}
-    </div>
     </main>
+    </div>
   );
 }
