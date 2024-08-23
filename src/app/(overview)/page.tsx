@@ -1,4 +1,4 @@
-import { ButtonGetOutOfert, Slider } from "@/components";
+import { ButtonGetOutOfert, MouseDown, Slider } from "@/components";
 import Link from "next/link";
 
 const images = [
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div >
       <div className="relative w-full  min-h-screen flex flex-col items-start justify-center bg-[rgba(219,219,219,0.1)]   ">
-        <div className=" mx-auto min-1200 pt-24 md:pt-20 pb-16 md:pb-0 px-4 ">
+        <div className=" mx-auto min-1200 pt-24 lg:pt-0 pb-16 lg:pb-0 px-4 ">
           <div className=" grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10  w-full h-full place-content-center ">
             <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full mr-0 lg:mr-24">
               <div className=" inset-0 h-full w-full object-cover">
@@ -21,13 +21,13 @@ export default function Home() {
                     />
               </div>
             </div> 
-              <div className=" lg:max-w-lg lg:text-left ml-0 lg:ml-24  ">
-                <h1 className=" font-bold text-2xl md:text-5xl text-center md:text-left  ">
+              <div className=" lg:max-w-lg lg:text-left ml-0 lg:ml-24  flex flex-col justify-center">
+                <h1 className=" font-bold text-2xl lg:text-5xl text-center lg:text-left  ">
                     Importadora de productos 
                     <br />
                     al mayor y detal
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-gray text-center md:text-left">
+                <p className="mt-6 text-lg leading-8 text-gray text-center lg:text-left">
                     Deleite a sus clientes con productos sostenibles de calidad, a precios asequibles
                 </p>
                 
@@ -43,6 +43,9 @@ export default function Home() {
                       </Link>
                 </div>
               </div>
+
+            <MouseDown/>
+
             </div>
           </div>
         </div>
