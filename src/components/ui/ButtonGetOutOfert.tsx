@@ -9,7 +9,7 @@ export const ButtonGetOutOfert = () => {
           <div className='block md:flex flex-row justify-end items-center w-full  ' >
             <div className={`
                             relative overflow-hidden w-full h-14 md:h-9 transition-colors duration-300 ease-in-out rounded-xl 
-                            before:content-[''] before:block before:absolute before:z-10 before:top-1/2 before:left-6 before:w-[1.125rem] before:h-[.875rem] before:transform before:-translate-y-[48%] before:pointer-events-none before:bg-no-repeat before:bg-center before:bg-[url('/images/email.svg')] before:bg-contain`
+                            before:content-[''] before:block before:absolute before:z-[1] before:top-1/2 before:left-6 before:w-[1.125rem] before:h-[.875rem] before:transform before:-translate-y-[48%] before:pointer-events-none before:bg-no-repeat before:bg-center before:bg-[url('/images/email.svg')] before:bg-contain`
                         }>
             <input
               type='email'
