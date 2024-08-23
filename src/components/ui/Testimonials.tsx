@@ -1,5 +1,21 @@
 import Link from 'next/link'
 import React from 'react'
+import { Card } from './Card'
+
+const  bestCategories = [
+  {
+    category:'Hogar',
+    name:'Si estás pensando en remodelar y agregar nuevos estilos en la decoración de tu hogar u oficina, el lugar ideal para encontrar: portarretratos, espejos, cuadros decorativos, floreros, adornos de cerámica, cortinas, alfombras y mucho más.'
+  },
+  {
+    category:'Jugueteria',
+    name:'Regálale a los más pequeños un mundo lleno de creatividad con nuestros juguetes para niñas, niños, bebés y enséñales de una forma divertida a aprender con nuestros juguetes didácticos o educativos.'
+  },
+  {
+    category:'Cocina',
+    name:'Cocinar es un arte en el que necesitas las herramientas perfectas para conquistar el paladar de tus seres queridos. Encuentra sartenes, ollas, tablas para picar y mucho más.'
+  }
+]
 
 
 export const Testimonials = () => {
@@ -10,7 +26,11 @@ export const Testimonials = () => {
             Categorias destacadas
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-            {/* cards */}
+            {
+              bestCategories?.map((item , index) => (
+                <Card category={item.category} name={item.name} key={`${item.category}+${index}`}/>
+              ))
+            }
           </div>
           <div className='mt-24'>
               <div className={`
