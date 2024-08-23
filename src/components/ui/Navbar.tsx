@@ -36,10 +36,11 @@ export const Navbar = () => {
 
 
   return (
-    <header  className={clsx('fixed z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between backdrop-blur-md transition-transform duration-500 ',{
+    <header  className={clsx('fixed z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between backdrop-blur-md bg-[hsla(0,0%,100%,0.65)] transition-transform duration-500 ',{
         'transform -translate-y-24 shadow-lg': scrollDirection === 'down' && !scrolledToTop,
         'transform translate-y-0 shadow-none': scrollDirection === 'up' && scrolledToTop,
-        'shadow-lg': scrollDirection === 'up' && !scrolledToTop
+        'shadow-lg': scrollDirection === 'up' && !scrolledToTop,
+        'bg-transparent':scrolledToTop
     })}>
         <div className='flex flex-row items-center justify-center'>
             <Link href={'/'} className='font-bold text-base'>
