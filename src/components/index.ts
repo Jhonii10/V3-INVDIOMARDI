@@ -9,3 +9,4 @@ export * from './ui/Testimonials';
 // Home
 export * from './home/Hero'
 export * from './home/Feature'
+export * from './home/Jobs'
