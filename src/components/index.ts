@@ -10,3 +10,4 @@ export * from './ui/Testimonials';
 export * from './home/Hero'
 export * from './home/Feature'
 export * from './home/Jobs'
+export * from './home/Reviews'
