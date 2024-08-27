@@ -5,6 +5,18 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.pexels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'btoys.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'herpo.com.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.americadecali.co',
       }
     ]
   }
