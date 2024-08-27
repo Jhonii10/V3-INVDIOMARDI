@@ -23,7 +23,7 @@ export const RedesSociales = () => {
         </Link>
         <Link
           href={'/#'}
-          className={`${styles} after:bg-gradient-to-r after:from-[#833ab4] after:via-[#fd1d1d] after:to-[#fcaf45] `}
+          className={`${styles} after:bg-gradient-to-r after:from-[#833ab4] after:via-[#ff5b5b] after:to-[#fcaf45] `}
          >
           <IconInstagram/>
         </Link>

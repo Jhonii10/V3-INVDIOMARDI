@@ -1,8 +1,19 @@
-import React from 'react'
+'use client'
+import React, { useRef } from 'react'
 
 export const MouseDown = () => {
+
+        const handleScroll = ()=>{
+            const element = document.getElementById("resources");
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
   return (
-    <div className="absolute bottom-4 left-4 z-2 max-sm:hidden  " >
+    <div className="absolute bottom-4 left-4 z-2 max-sm:hidden "
+        onClick={handleScroll}
+    >
         <div
             className="flex flex-row items-center justify-start select-none cursor-pointer text-md leading-2"
             role="button"
