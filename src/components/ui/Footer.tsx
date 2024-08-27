@@ -5,6 +5,7 @@ import React from 'react'
 import { FiPhone } from 'react-icons/fi'
 import { GoLocation } from 'react-icons/go'
 import { MdOutlineMail } from 'react-icons/md'
+import { RedesSociales } from './RedesSociales'
 
 export const Footer = () => {
   return (
@@ -38,7 +39,7 @@ export const Footer = () => {
             consequuntur amet culpa cum itaque neque.
           </p>
           <ul className="mt-8 flex justify-center gap-4 sm:justify-start md:gap-8">
-            {/* redes sociales */}
+            <RedesSociales/>
           </ul>
         </div>
         <div className="flex flex-col sm:flex-row justify-between gap-8">
