@@ -5,6 +5,7 @@ export * from './ui/Slider';
 export * from './ui/ButtonGetOutOfert';
 export * from './ui//MouseDown';
 export * from './ui/Testimonials';
+export * from './ui/Footer';
 
 // Home
 export * from './home/Hero'
