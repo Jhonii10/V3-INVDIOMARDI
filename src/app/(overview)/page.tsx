@@ -6,7 +6,7 @@ export default function Home() {
     <div >
        <Hero/>
        <Feature/>
-       <Jobs  />
+       <Jobs/>
        <Reviews/>
     </div>
   );

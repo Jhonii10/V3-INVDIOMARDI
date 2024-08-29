@@ -52,16 +52,16 @@ export const Navbar = () => {
                     onMouseEnter={()=>setIsDropdownOpen(true)}
                     onMouseLeave={()=>setIsDropdownOpen(false)}
                     >
-                    <Link href={'/resources'}
-                    onClick={()=>setIsDropdownOpen(false)}
+                    <div 
+
                     >
                         <span
-                            className={`relative inline-block pr-[1.125rem] after:content-[''] after:block after:absolute after:top-1/2 after:right-0 after:-mt-[0.1875rem] after:w-[0.625rem] after:h-[0.375rem] after:bg-[url('/images/arrow.svg')] after:bg-center after:bg-no-repeat after:bg-contain`}
+                            className={`relative cursor-pointer inline-block pr-[1.125rem] after:content-[''] after:block after:absolute after:top-1/2 after:right-0 after:-mt-[0.1875rem] after:w-[0.625rem] after:h-[0.375rem] after:bg-[url('/images/arrow.svg')] after:bg-center after:bg-no-repeat after:bg-contain`}
                             
                         >
                             Recursos
                         </span>
-                    </Link>
+                    </div>
                     <div
                         className={clsx(
                             `absolute z-10 top-full left-0 w-full bg-[var(--primary-color-100)] py-16 px-10 transition-all duration-500 ease-linear
