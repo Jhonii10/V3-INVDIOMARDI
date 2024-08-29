@@ -8,7 +8,7 @@ export const Feature = () => {
   return (
     <div className='px-4 lg:px-16' id='resources' >
                 <div className='mt-12'  >
-                <h2 className='text-center text-2xl lg:text-4xl font-semibold'>Medios</h2>
+                <h2 className='text-center text-2xl lg:text-4xl font-semibold'>Recursos</h2>
                 <div className=' mt-12'>
                     <Options data={menuItem}/>
                     <Testimonials/>
