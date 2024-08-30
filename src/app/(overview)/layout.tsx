@@ -10,7 +10,7 @@ export default function OverviewLayout({
     <div >
     <Navbar/>
     <Sidebar/>
-    <main>
+    <main >
     {children}
     </main>
     <Footer/>

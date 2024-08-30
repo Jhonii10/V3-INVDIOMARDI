@@ -6,6 +6,7 @@ export * from './ui/ButtonGetOutOfert';
 export * from './ui//MouseDown';
 export * from './ui/Testimonials';
 export * from './ui/Footer';
+export * from './ui/BreadCrums';
 
 // Home
 export * from './home/Hero'
