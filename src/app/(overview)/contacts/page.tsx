@@ -1,8 +1,12 @@
+import { BreadCrums, Jobs } from "@/components";
 
 export default function ContactsPage() {
   return (
-    <div>
-      <h1>ContactsPage</h1>
+    <div className="pt-24"  >
+      <BreadCrums/>  
+      <h1 className="text-center text-2xl lg:text-4xl font-semibold pt-6">Contactanos</h1>
+       {/*  Other seccions */}
+      <Jobs/>
     </div>
   );
 }
