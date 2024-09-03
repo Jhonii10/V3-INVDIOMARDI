@@ -8,17 +8,18 @@ interface Props {
 }
 export const Card = ({category , name }:Props) => {
 
-    const path = `/images/categories/${category}.png`;
+    const path = `/images/categories/${category.replace(/\s+/g, '')}.png`;
 
   return (
-    <div className="rounded-lg bg-gray-100 p-8">
-      <Link href={`/categories/${category.toLowerCase()}`} >
-          <div className='flex justify-center items-center'>
+    <div className="rounded-lg bg-gray-100 p-8 hover:shadow-xl hover:z-[1] group ">
+      <Link href={`/categories/${category.toLowerCase().replace(/\s+/g, '')}`}  >
+          <div className='flex justify-center items-center '>
             <Image
                 width={500}
                 height={500}
                 alt={category}
                 src={path}
+                className="transform transition-transform duration-500 ease-in-out group-hover:scale-105"
             
             />
           </div>

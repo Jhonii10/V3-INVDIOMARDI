@@ -7,9 +7,13 @@ export * from './ui//MouseDown';
 export * from './ui/Testimonials';
 export * from './ui/Footer';
 export * from './ui/BreadCrums';
+export * from './ui/Card';
 
 // Home
 export * from './home/Hero'
 export * from './home/Feature'
 export * from './home/Jobs'
 export * from './home/Reviews'
+
+// categories 
+export * from './categories/ListCard'
