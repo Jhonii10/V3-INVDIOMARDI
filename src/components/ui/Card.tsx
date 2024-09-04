@@ -29,7 +29,7 @@ export const Card = ({category , name }:Props) => {
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </div>
-          <div className="py-2 w-full overflow-hidden text-ellipsis text-gray-600 leading-100 text-base">
+          <div className="py-2 w-full overflow-hidden text-ellipsis text-gray-600 leading-100 text-base max-h-14 whitespace-pre ">
             {name.charAt(0).toUpperCase() + name.slice(1)}
           </div>
         </div>
