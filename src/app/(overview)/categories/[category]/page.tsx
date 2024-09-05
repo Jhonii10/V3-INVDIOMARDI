@@ -1,4 +1,4 @@
-import { ButtonGetOutOfert, Jobs } from "@/components";
+import { ButtonGetOutOfert, Earnings, Jobs } from "@/components";
 import { categories } from "@/models";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,8 +52,12 @@ export default function CategoryPage({params}:Props) {
         <div className="relative lg:absolute bottom-0 lg:bottom-[calc(77*7.74px*0.05)] right-0 lg:right-9 w-full lg:w-4/12 p-4 lg:p-0">
             <ButtonGetOutOfert/>
         </div>
-      </div> 
-      <Jobs/>
+      </div>
+      
+      <Earnings/> 
+      <div className="pb-16 sm:pb-0">
+        <Jobs/>
+      </div>
     </div>
   );
 }

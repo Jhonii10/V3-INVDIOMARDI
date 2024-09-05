@@ -8,6 +8,7 @@ export * from './ui/Testimonials';
 export * from './ui/Footer';
 export * from './ui/BreadCrums';
 export * from './ui/Card';
+export * from './ui/Earnings';
 
 // Home
 export * from './home/Hero'

@@ -15,7 +15,7 @@ export const ButtonGetOutOfert = () => {
               type='email'
               name='email'
               placeholder='name@gmail.com'
-              className='absolute top-0 left-0 w-full h-full outline-none text-gray-600 pl-14 pr-14 text-base bg-gray-100'
+              className='absolute top-0 left-0 w-full h-full outline-none text-gray-600 pl-14 pr-14 text-sm bg-gray-100'
               autoComplete='off'
             />
             </div>
