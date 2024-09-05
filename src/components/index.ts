@@ -18,3 +18,6 @@ export * from './home/Reviews'
 
 // categories 
 export * from './categories/ListCard'
+
+// about
+export * from './about/Origin'
