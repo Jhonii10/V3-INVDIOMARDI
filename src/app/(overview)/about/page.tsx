@@ -1,4 +1,4 @@
-import { BreadCrums, Jobs, Origin, Reviews } from "@/components";
+import { BreadCrums, Jobs, MisionAndVision, Origin, Reviews } from "@/components";
 
 export default function AboutPage() {
   return (
@@ -8,6 +8,8 @@ export default function AboutPage() {
         <div className='px-4 md:px-8 lg:px-16 max-w-screen-lg '>
           <h1 className="text-left text-2xl lg:text-4xl font-bold pt-6 mb-10">¿Quienes somos?</h1>
           <Origin/>
+          <hr className='mt-16' />
+          <MisionAndVision/>
           <hr className='mt-16' />
         </div>
       </div>
