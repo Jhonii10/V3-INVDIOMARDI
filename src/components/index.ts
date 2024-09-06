@@ -22,3 +22,4 @@ export * from './categories/ListCard'
 // about
 export * from './about/Origin'
 export * from './about/MisionAndVision'
+export * from './about/Recognitions'
