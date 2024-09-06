@@ -1,4 +1,4 @@
-import { BreadCrums, Jobs, MisionAndVision, Origin, Reviews } from "@/components";
+import { BreadCrums, Jobs, MisionAndVision, Origin, Recognitions, Reviews } from "@/components";
 
 export default function AboutPage() {
   return (
@@ -13,6 +13,7 @@ export default function AboutPage() {
           <hr className='mt-16' />
         </div>
       </div>
+      <Recognitions/>
       <Reviews/>
       <Jobs/>
     </div>
