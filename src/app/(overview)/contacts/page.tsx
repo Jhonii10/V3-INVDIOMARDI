@@ -1,4 +1,4 @@
-import { BreadCrums, ContactInformation, Jobs } from "@/components";
+import { BreadCrums, ContactInformation, FormContact, Jobs } from "@/components";
 
 export default function ContactsPage() {
   return (
@@ -8,6 +8,7 @@ export default function ContactsPage() {
         <div className='px-4 md:px-16 lg:px-32 max-w-6xl '>
         <h1 className="text-center text-2xl lg:text-4xl font-bold pt-6">Contactanos</h1>
         <ContactInformation/>
+        <FormContact/>
         </div>
       </div>
        
