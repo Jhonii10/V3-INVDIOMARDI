@@ -23,3 +23,6 @@ export * from './categories/ListCard'
 export * from './about/Origin'
 export * from './about/MisionAndVision'
 export * from './about/Recognitions'
+
+// contact
+export * from './contacts/ContactInformation'
