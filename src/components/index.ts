@@ -27,3 +27,4 @@ export * from './about/Recognitions'
 // contact
 export * from './contacts/ContactInformation'
 export * from './contacts/FormContact'
+export * from './contacts/Faq'
