@@ -55,9 +55,7 @@ export default function CategoryPage({params}:Props) {
       </div>
       
       <Earnings/> 
-      <div className="pb-16 sm:pb-0">
-        <Jobs/>
-      </div>
+      <Jobs/>
     </div>
   );
 }

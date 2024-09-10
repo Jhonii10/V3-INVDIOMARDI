@@ -8,6 +8,7 @@ import { IoMenuOutline, IoSearchOutline } from 'react-icons/io5'
 import { Options } from './Options';
 import { menuItem } from '@/models';
 import { useScrollDirection } from '@/hooks';
+import { usePathname } from 'next/navigation';
 
 
 
@@ -15,6 +16,8 @@ export const Navbar = () => {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const openSideMenu = useUiStore(state => state.openSideMenu)
+    const pathname = usePathname();
+    console.log(pathname)
 
     const scrollDirection = useScrollDirection({initialDirection:'down'});
     const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -81,14 +84,19 @@ export const Navbar = () => {
                 </li>
                 <li className='ml-4'>
                     <Link href={'/about'}>
-                        <span >
+                        <span className={clsx({
+                            'font-semibold': pathname === '/about',
+                        })}>
                             ¿Quienes somos?
                         </span>
                     </Link>
                 </li>
                 <li className='ml-4'>
                     <Link href={'/contacts'}>
-                        <span>Contactanos</span>
+                        <span className={clsx({
+                            'font-semibold': pathname === '/contacts',
+                        })}
+                        >Contactanos</span>
                     </Link>
                 </li>
 

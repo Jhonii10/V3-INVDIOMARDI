@@ -6,10 +6,14 @@ import { FiPhone } from 'react-icons/fi'
 import { GoLocation } from 'react-icons/go'
 import { MdOutlineMail } from 'react-icons/md'
 import { RedesSociales } from './RedesSociales'
+import { usePathname } from 'next/navigation'
+import clsx from 'clsx'
 
 export const Footer = () => {
+
+  const pathname = usePathname();
   return (
-    <footer className="bg-white">
+    <footer className="bg-white mt-8">
     <div className="mx-auto max-w-screen-xl px-4 pb-6  sm:px-6 lg:px-8 ">
       <div className="flex flex-col sm:flex-row justify-between gap-4">
         <div>
@@ -49,7 +53,9 @@ export const Footer = () => {
             {
               menuItem.map(menuItem => 
                 <li key={menuItem.name}>
-                <Link className="text-gray-700 transition hover:text-gray-700/75" href={menuItem.link}>
+                <Link className={clsx("text-gray-700 transition hover:text-gray-700/75",{
+                  "font-semibold": pathname === menuItem.link
+                })} href={menuItem.link}>
                       {menuItem.name}
                 </Link>
 
