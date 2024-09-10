@@ -1,11 +1,16 @@
-import { BreadCrums } from "@/components";
+import { BreadCrums, TitleAndImage,  } from "@/components";
 
 export default function TeamPage() {
   return (
     <div className="pt-24"  >
-      <BreadCrums/>  
-      <h1 className="text-center text-2xl lg:text-4xl font-semibold pt-6">Nuestro equipo</h1>
-       {/*  Other seccions */}
+      <BreadCrums/>
+      <div>
+        <TitleAndImage 
+          url={"https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
+          title="Nuestro equipo"
+        />
+      </div>
+
     </div>
   );
 }

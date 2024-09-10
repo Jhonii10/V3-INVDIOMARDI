@@ -9,6 +9,7 @@ export * from './ui/Footer';
 export * from './ui/BreadCrums';
 export * from './ui/Card';
 export * from './ui/Earnings';
+export * from './ui/TitleAndImage'
 
 // Home
 export * from './home/Hero'
@@ -28,3 +29,4 @@ export * from './about/Recognitions'
 export * from './contacts/ContactInformation'
 export * from './contacts/FormContact'
 export * from './contacts/Faq'
+
