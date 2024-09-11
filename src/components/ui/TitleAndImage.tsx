@@ -2,12 +2,12 @@ import React from 'react'
 
 interface Props {
     url: string,
-    title: string,
+    children: React.ReactNode,
 }
 
-export const TitleAndImage = ({url, title}:Props) => {
+export const TitleAndImage = ({url , children}:Props) => {
   return (
-    <section className='mt-4'>
+    <section className='mt-8'>
         <div className='flex justify-center items-center content-center flex-wrap max-w-6xl m-auto px-8 lg:px-0 '>
             <div 
                 className={`h-80 bg-cover bg-center bg-no-repeat
@@ -18,7 +18,7 @@ export const TitleAndImage = ({url, title}:Props) => {
                 }}
                 >
                 <div className='opacity-100 bg-gradient-to-b from-transparent to-[var(--primary-color-300)] h-full w-full absolute left-0 top-0 rounded-3xl'/>
-                <h1 className='text-left text-2xl lg:text-4xl font-bold text-white drop-shadow-md'>{title}</h1>
+                {children}
             </div>
         </div>
     </section>
