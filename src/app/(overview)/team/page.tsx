@@ -1,4 +1,4 @@
-import { BreadCrums, TitleAndImage,  } from "@/components";
+import { BreadCrums, GetKnowOurTeam, TitleAndImage,  } from "@/components";
 
 export default function TeamPage() {
   return (
@@ -9,6 +9,7 @@ export default function TeamPage() {
           url={"https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
           title="Nuestro equipo"
         />
+        <GetKnowOurTeam/>
       </div>
 
     </div>

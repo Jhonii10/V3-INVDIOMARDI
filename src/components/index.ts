@@ -30,3 +30,5 @@ export * from './contacts/ContactInformation'
 export * from './contacts/FormContact'
 export * from './contacts/Faq'
 
+// team
+export * from './team/GetKnowOurTeam'
