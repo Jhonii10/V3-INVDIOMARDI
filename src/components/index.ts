@@ -35,3 +35,4 @@ export * from './team/GetKnowOurTeam'
 
 // jobs
 export * from './jobs/JoinOurTeam'
+export * from './jobs/JobsOffert'
