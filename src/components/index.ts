@@ -36,3 +36,6 @@ export * from './team/GetKnowOurTeam'
 // jobs
 export * from './jobs/JoinOurTeam'
 export * from './jobs/JobsOffert'
+
+// locations
+export * from './locations/LocationsSection'
