@@ -32,3 +32,6 @@ export * from './contacts/Faq'
 
 // team
 export * from './team/GetKnowOurTeam'
+
+// jobs
+export * from './jobs/JoinOurTeam'
