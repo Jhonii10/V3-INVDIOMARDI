@@ -1,4 +1,4 @@
-import { BreadCrums, JoinOurTeam, TitleAndImage } from "@/components";
+import { BreadCrums, JobsOffert, JoinOurTeam, TitleAndImage } from "@/components";
 
 export default function JobsPage() {
   return (
@@ -11,6 +11,7 @@ export default function JobsPage() {
           <h1 className='text-left text-2xl lg:text-4xl font-bold text-white drop-shadow-md'>Oportunidades</h1>
         </TitleAndImage>
         <JoinOurTeam/>
+        <JobsOffert/>
       </div>
     </div>
   );
