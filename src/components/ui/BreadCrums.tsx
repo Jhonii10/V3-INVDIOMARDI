@@ -15,6 +15,7 @@ export const BreadCrums = () => {
         'jobs':'oportunidades',
         'locations':'ubicaciones',
         'team':'nuestro equipo',
+        'reviews':'reseñas',
         
     } as any;
 
