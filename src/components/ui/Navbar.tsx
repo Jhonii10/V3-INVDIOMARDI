@@ -12,12 +12,12 @@ import { usePathname } from 'next/navigation';
 
 
 
+
 export const Navbar = () => {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const openSideMenu = useUiStore(state => state.openSideMenu)
     const pathname = usePathname();
-    console.log(pathname)
 
     const scrollDirection = useScrollDirection({initialDirection:'down'});
     const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -47,7 +47,7 @@ export const Navbar = () => {
     })}>
         <div className='flex flex-row items-center justify-center'>
             <Link href={'/'} className='font-bold text-base'>
-                Inversiones Diomardi
+                inversiones diomardi
             </Link>
             <ul className='m-0 md:ml-8 p-0 list-none hidden lg:flex  flex-row items-center justify-center '>
                 <li 

@@ -41,7 +41,9 @@ export const Hero = () => {
                        <div className='border border-grey-100 my-10'/>
                 </div > 
                 <div className="flex justify-center items-center lg:justify-start"> 
-                      <Link className="bg-[var(--primary-color-400)] hover:bg-[var(--primary-color-500)]  font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline" href='/productos'>
+                      <Link className="bg-[var(--primary-color-400)] hover:bg-[var(--primary-color-500)]  font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline" 
+                            href='/categories'
+                      >
                           Ver todas nuestras categorias
                       </Link>
                 </div>

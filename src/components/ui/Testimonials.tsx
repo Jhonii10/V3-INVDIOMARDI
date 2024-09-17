@@ -39,7 +39,7 @@ export const Testimonials = () => {
                     after:content-[''] after:block after:relative after:w-[40vw] after:h-[1px] after:bg-[var(--primary-color-200)]
                 `}>
                   <Link 
-                    href='/category'
+                    href='/categories'
                     className="inline-flex flex-row items-center justify-center text-center bg-[var(--primary-color-300)] border-[var(--primary-color-300)] hover:bg-[var(--primary-color-400)] cursor-pointer font-bold rounded-full p-6 mx-7 min-w-40 "
                   >
                       Ver Mas
