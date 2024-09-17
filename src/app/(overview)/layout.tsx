@@ -1,4 +1,4 @@
-import { Footer, Navbar, Sidebar } from "@/components";
+import { Footer, Navbar, Search, Sidebar } from "@/components";
 
 
 export default function OverviewLayout({
@@ -10,6 +10,7 @@ export default function OverviewLayout({
     <div >
     <Navbar/>
     <Sidebar/>
+    <Search/>
     <main >
     {children}
     </main>
