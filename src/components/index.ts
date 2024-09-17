@@ -10,6 +10,7 @@ export * from './ui/BreadCrums';
 export * from './ui/Card';
 export * from './ui/Earnings';
 export * from './ui/TitleAndImage'
+export * from './ui/Search'
 
 // Home
 export * from './home/Hero'

@@ -9,6 +9,7 @@ import { Options } from './Options';
 import { menuItem } from '@/models';
 import { useScrollDirection } from '@/hooks';
 import { usePathname } from 'next/navigation';
+import { Search } from './Search';
 
 
 
@@ -16,7 +17,8 @@ import { usePathname } from 'next/navigation';
 export const Navbar = () => {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const openSideMenu = useUiStore(state => state.openSideMenu)
+    const openSideMenu = useUiStore(state => state.openSideMenu);
+    const openSearch = useUiStore(state => state.openSearch)
     const pathname = usePathname();
 
     const scrollDirection = useScrollDirection({initialDirection:'down'});
@@ -112,9 +114,11 @@ export const Navbar = () => {
             </Link>
             <button
                 className='relative flex flex-row items-center justify-center w-12 h-12 text-black transition-colors duration-[350ms] ease-0'
+                onClick={openSearch}
                 >
                     {<IoSearchOutline size={24} />}
             </button>
+            
             <button 
                 className="appearance-none border-0 p-0 cursor-pointer flex lg:hidden flex-row items-center justify-center w-12 h-12 bg-[var(--primary-color-300)] rounded-full text-black"
                 onClick={openSideMenu}
@@ -122,7 +126,6 @@ export const Navbar = () => {
                 {<IoMenuOutline size={20} />}
             </button>
         </div>
-
     </header>
   )
 }
