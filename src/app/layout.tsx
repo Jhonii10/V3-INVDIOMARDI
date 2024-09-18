@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const quicksank = Quicksand({ subsets: ["latin"] });
 
@@ -16,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={quicksank.className}>{children}</body>
+      <body className={quicksank.className}>
+      <Toaster
+        position="bottom-right"
+        reverseOrder={false}
+      />
+        {children}
+      </body>
     </html>
   );
 }

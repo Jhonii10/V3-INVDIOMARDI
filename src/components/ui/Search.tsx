@@ -23,8 +23,8 @@ export const Search = () => {
     const routes = [
         { path: '/', name: 'Inicio' },
         { path: '/about', name: 'Quienes somos' },
-        { path: '/products', name: 'categorias' },
-        { path: '/contact', name: 'Contactanos' },
+        { path: '/categories', name: 'categorias' },
+        { path: '/contacts', name: 'Contactanos' },
         { path: '/jobs', name: 'Oportunidades' },
         { path: '/locations', name: 'Ubicaciones' },
         { path: '/reviews', name: 'Reseñas' },
