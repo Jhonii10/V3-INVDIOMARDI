@@ -10,6 +10,7 @@ import { menuItem } from '@/models';
 import { useScrollDirection } from '@/hooks';
 import { usePathname } from 'next/navigation';
 import { Search } from './Search';
+import { IconLogo } from '../icons';
 
 
 
@@ -49,7 +50,7 @@ export const Navbar = () => {
     })}>
         <div className='flex flex-row items-center justify-center'>
             <Link href={'/'} className='font-bold text-base'>
-                inversiones diomardi
+                <IconLogo/>
             </Link>
             <ul className='m-0 md:ml-8 p-0 list-none hidden lg:flex  flex-row items-center justify-center '>
                 <li 

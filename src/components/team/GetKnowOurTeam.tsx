@@ -34,7 +34,7 @@ export const GetKnowOurTeam = () => {
                 <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-8">
                     {
                         team?.map(({name, position , bio,image})=>(
-                            <div className=' rounded-xl shadow-md'>
+                            <div className=' rounded-xl shadow-md' key={name}>
                                 <Image
                                 width={720}
                                 height={720}
