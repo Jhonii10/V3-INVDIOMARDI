@@ -4,6 +4,11 @@
   ],
   "hints": {
     "no-inline-styles": "off",
-    "axe/structure": "off"
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ]
   }
 }
