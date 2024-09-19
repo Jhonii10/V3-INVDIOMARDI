@@ -45,6 +45,14 @@ export const Footer = () => {
                 </li>
               )
             }
+            <li>
+                <Link className={clsx("text-gray-700 transition hover:text-gray-700/75",{
+                  "font-semibold": pathname === '/privacity'
+                })} href={'/privacity'}>
+                      Privacidad y tratamiento de datos
+                </Link>
+
+                </li>
             </ul>
           </div>
           
