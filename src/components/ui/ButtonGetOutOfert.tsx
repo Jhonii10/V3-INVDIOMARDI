@@ -66,8 +66,8 @@ export const ButtonGetOutOfert = () => {
                 },
               })}
               className={clsx('absolute top-0 left-0 w-full h-full outline-none text-gray-600 pl-14 pr-14 text-sm bg-gray-100',{
-                'bg-red-100 border lg:border-red-300 bg-transparent rounded-xl': errors.email || emailValue.length > 0 && !isValid,
-                'bg-green-100 border border-green-300 bg-transparent rounded-xl':isValid 
+                'bg-red-100 border border-red-300 rounded-xl': errors.email || emailValue.length > 0 && !isValid,
+                'bg-green-100 border border-green-300  rounded-xl':isValid 
               })}
               autoComplete='off'
             />

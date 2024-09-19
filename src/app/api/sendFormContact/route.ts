@@ -21,7 +21,6 @@ export async function POST(request: Request) {
       },
     });
 
-    // Correo al propietario (ti mismo)
     await transporter.sendMail({
       from: `"${name}" <${email}>`, 
       to: process.env.EMAIL_USER,
