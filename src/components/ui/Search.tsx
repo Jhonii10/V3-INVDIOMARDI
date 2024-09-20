@@ -28,8 +28,19 @@ export const Search = () => {
         { path: '/jobs', name: 'Oportunidades' },
         { path: '/locations', name: 'Ubicaciones' },
         { path: '/reviews', name: 'Reseñas' },
-        { path: '/team', name: 'nuestro equipo' },
-        //...
+        { path: '/categories/hogar', name: 'hogar' },
+        { path: '/categories/jugueteria', name: 'jugueteria' },
+        { path: '/categories/cristaleria', name: 'cristaleria' },
+        { path: '/categories/ferreteria', name: 'ferreteria' },
+        { path: '/categories/limpieza', name: 'limpieza' },
+        { path: '/categories/mascotas', name: 'mascotas' },
+        { path: '/categories/cocina', name: 'cocina' },
+        { path: '/categories/fiesta', name: 'fiesta' },
+        { path: '/categories/bebe', name: 'bebe' },
+        { path: '/categories/comida', name: 'comida' },
+        { path: '/categories/oficina', name: 'oficina' },
+        { path: '/categories/saludybelleza', name: 'salud y belleza' },
+        
     ];
 
     const filteredRoutes = routes.filter((route) =>
