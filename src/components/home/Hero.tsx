@@ -13,8 +13,8 @@ const images = [
 
 export const Hero = () => {
   return (
-    <div className="relative w-full  min-h-screen flex flex-col items-start justify-center bg-[rgba(219,219,219,0.1)]   ">
-        <div className=" mx-auto min-1200 pt-24 lg:pt-0 pb-16 lg:pb-0 px-4 ">
+    <div className="relative w-full min-h-[calc(100*5.5px)] lg:lg:min-h-[calc(100*7.1px)] xl:min-h-screen flex flex-col items-start justify-center bg-[rgba(219,219,219,0.1)] py-24 lg:py-28">
+        <div className=" mx-auto px-4   ">
           <div className=" grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10  w-full h-full place-content-center ">
             <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full mr-0 lg:mr-24">
               <div className=" inset-0 h-full w-full object-cover">
