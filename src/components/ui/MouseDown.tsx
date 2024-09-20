@@ -11,7 +11,7 @@ export const MouseDown = () => {
         }
 
   return (
-    <div className="absolute bottom-4 left-4 z-2 max-sm:hidden "
+    <div className="absolute bottom-4 left-4 z-2 max-sm:hidden"
         onClick={handleScroll}
     >
         <div

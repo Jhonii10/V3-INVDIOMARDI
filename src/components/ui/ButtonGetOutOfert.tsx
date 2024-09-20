@@ -50,7 +50,7 @@ export const ButtonGetOutOfert = () => {
       {
         !showForm && !loading &&
         <form onSubmit={handleSubmit(onSubmit)} >
-          <div className='block md:flex flex-row justify-end items-center w-full  ' >
+          <div className='block md:flex flex-row justify-center items-center w-full  ' >
             <div className={`
                             relative overflow-hidden w-full h-14 md:h-9 transition-colors duration-300 ease-in-out rounded-xl border border-gray-200 
                             before:content-[''] before:block before:absolute before:z-[1] before:top-1/2 before:left-6 before:w-[1.125rem] before:h-[.875rem] before:transform before:-translate-y-[48%] before:pointer-events-none before:bg-no-repeat before:bg-center before:bg-[url('/images/email.svg')] before:bg-contain`
@@ -75,7 +75,8 @@ export const ButtonGetOutOfert = () => {
           
           <button 
             className={`
-                border-0 pr-11 pl-6 flex-shrink-0 h-14 md:h-9 w-full md:w-[50%] relative md:absolute -mr-2 rounded-[1.875rem] cursor-pointer block overflow-hidden bg-[var(--third-color-400)] whitespace-nowrap truncate font-bold transition-colors duration-300 ease-in-out
+                border-0 pr-11 pl-6 flex-shrink-0 h-14 md:h-9 w-full md:w-[50%] relative ml-0 md:-ml-10 rounded-[1.875rem] cursor-pointer block overflow-hidden bg-[var(--third-color-400)] whitespace-nowrap truncate font-bold transition-colors duration-300 ease-in-out
+                appearance-none  
                 after:content-[''] after:block after:absolute after:top-0 after:right-[1.3rem]  after:h-full after:bg-[url('/images/submit-arrow.svg')] after:bg-center after:bg-no-repeat after:bg-contain after:w-3 after:md:w-[.625rem]
                 `}
              type='submit'
