@@ -3,7 +3,7 @@
 import { locationsRetailers, locationsWholesalers } from '@/models';
 import clsx from 'clsx';
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 export const LocationsSection = () => {
     const [state, setState] = useState(true);

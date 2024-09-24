@@ -11,6 +11,7 @@ export * from './ui/Card';
 export * from './ui/Earnings';
 export * from './ui/TitleAndImage'
 export * from './ui/Search'
+export * from './ui/ParticlesContainer'
 
 // Home
 export * from './home/Hero'

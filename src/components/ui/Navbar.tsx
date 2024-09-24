@@ -9,7 +9,6 @@ import { Options } from './Options';
 import { menuItem } from '@/models';
 import { useScrollDirection } from '@/hooks';
 import { usePathname } from 'next/navigation';
-import { Search } from './Search';
 import { IconLogo } from '../icons';
 
 
@@ -26,7 +25,7 @@ export const Navbar = () => {
     const [scrolledToTop, setScrolledToTop] = useState(true);
 
     const handleScroll = () => {
-        setScrolledToTop(window.scrollY < 50);
+        setScrolledToTop(window.scrollY < 25);
       };
     
       useEffect(() => {
@@ -42,10 +41,10 @@ export const Navbar = () => {
 
 
   return (
-    <header  className={clsx('fixed z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between backdrop-blur-md bg-[hsla(0,0%,100%,0.65)] transition-transform duration-500 ',{
-        'transform -translate-y-24 shadow-lg': scrollDirection === 'down' && !scrolledToTop,
+    <header  className={clsx('fixed z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between  bg-[hsla(0,0%,100%,0.65)] transition-transform duration-500 ',{
+        'transform -translate-y-24 shadow-lg backdrop-blur-md': scrollDirection === 'down' && !scrolledToTop,
         'transform translate-y-0 shadow-none': scrollDirection === 'up' && scrolledToTop,
-        'shadow-lg': scrollDirection === 'up' && !scrolledToTop,
+        'shadow-lg backdrop-blur-md': scrollDirection === 'up' && !scrolledToTop,
         'bg-transparent':scrolledToTop
     })}>
         <div className='flex flex-row items-center justify-center'>
