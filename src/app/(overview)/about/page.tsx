@@ -1,4 +1,10 @@
 import { BreadCrums, Jobs, MisionAndVision, Origin, Recognitions, Reviews } from "@/components";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "¿Quienes somos?",
+  description: ""
+};
 
 export default function AboutPage() {
   return (

@@ -1,5 +1,12 @@
 import { BreadCrums, Jobs, ListCard } from "@/components";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Categorias",
+  description: ""
+};
+
 export default function CategoriesPage() {
   return (
     <div className="pt-24"  >

@@ -58,6 +58,7 @@ export const Slider = ({images,title,className}:Props) => {
             </SwiperSlide>
         ))
       }
+      
     </Swiper>
     </>
   )

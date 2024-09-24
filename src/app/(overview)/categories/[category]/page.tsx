@@ -1,5 +1,6 @@
 import { ButtonGetOutOfert, Earnings, Jobs } from "@/components";
 import { categories } from "@/models";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,6 +9,24 @@ interface Props {
         category: string
     }
 }
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const category = params.category;
+
+ 
+  return {
+    title: `Categoria | ${category}` ?? 'Categoria no encontrado',
+    description: "",
+
+  }
+
+}
+
+
 
 export default function CategoryPage({params}:Props) {
 

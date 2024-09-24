@@ -78,7 +78,7 @@ export const Navbar = () => {
                                 'opacity-0 invisible translate-y-6': !isDropdownOpen
                             }
                         )}
-                        style={{ '--left-space': '284.44375228881836px' } as React.CSSProperties}
+                        style={{ '--left-space': '300.44375228881836px' } as React.CSSProperties}
                     >
                        <div>
                         <Options data={menuItem} optionMenu={()=>setIsDropdownOpen(false)}/>

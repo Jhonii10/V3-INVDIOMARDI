@@ -1,4 +1,10 @@
 import { BreadCrums, JobsOffert, JoinOurTeam, TitleAndImage } from "@/components";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Oportunidades",
+  description: ""
+};
 
 export default function JobsPage() {
   return (
