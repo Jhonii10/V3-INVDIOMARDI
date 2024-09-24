@@ -1,6 +1,12 @@
 import { BreadCrums, Jobs } from "@/components";
 import reviews from "@/models/reviews";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Reseñas",
+  description: ""
+};
 
 export default function ReviewsPage() {
   return (

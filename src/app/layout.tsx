@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 const quicksank = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Inversiones Diomardi sas",
+  title: "Inversiones Diomardi",
   description: "sitio web oficial de la importadora inversiones diomardi sas",
 };
 

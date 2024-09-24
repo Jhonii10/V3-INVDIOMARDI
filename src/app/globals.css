@@ -101,3 +101,19 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* Adjust arrow position */
+ .swiper-button-next,
+ .swiper-button-prev {
+  height: 50px !important;
+  width: 50px !important;
+  background: #fff !important;
+  border: 1px solid #fff !important;
+  border-radius: 50% !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after
+ {
+  font-size:1.1rem !important;
+}

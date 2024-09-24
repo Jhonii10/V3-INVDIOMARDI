@@ -1,5 +1,12 @@
 import { BreadCrums, ContactInformation, Faq, FormContact, Jobs } from "@/components";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contactanos",
+  description: ""
+};
+
 export default function ContactsPage() {
   return (
     <div className="pt-24"  >

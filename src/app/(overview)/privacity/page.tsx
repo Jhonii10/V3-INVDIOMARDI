@@ -1,4 +1,10 @@
 import { BreadCrums } from "@/components";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Política de Privacidad",
+    description: ""
+  };
 
 export default function PrivacityPage() {
   return (

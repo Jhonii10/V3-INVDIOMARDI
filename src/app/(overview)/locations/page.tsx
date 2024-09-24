@@ -1,4 +1,11 @@
 import { BreadCrums, Jobs, LocationsSection, Reviews, TitleAndImage } from "@/components";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ubicaciones",
+  description: ""
+};
+
 
 export default function LocationsPage() {
   return (

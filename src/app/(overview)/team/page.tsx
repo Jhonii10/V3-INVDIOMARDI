@@ -1,6 +1,14 @@
 import { BreadCrums, GetKnowOurTeam, TitleAndImage,  } from "@/components";
 import Link from "next/link";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nuestro equipo",
+  description: ""
+};
+
+
 export default function TeamPage() {
   return (
     <div className="pt-24"  >
