@@ -1,18 +1,22 @@
 'use client'
-import React, { useRef } from 'react'
+import { useFirstVisit } from '@/hooks';
+import React from 'react'
 
 export const MouseDown = () => {
 
-        const handleScroll = ()=>{
+    const handleScroll = ()=>{
             const element = document.getElementById("resources");
             if (element) {
                 element.scrollIntoView({ behavior: "smooth" });
             }
-        }
+    }
+
+    const isFirstVisit = useFirstVisit();
 
   return (
-    <div className="absolute bottom-4 left-4 z-2 max-sm:hidden"
+    <div className={`absolute bottom-4 left-4 z-2 max-sm:hidden animate__animated ${isFirstVisit && 'animate__fadeIn'} `}
         onClick={handleScroll}
+        style={{ animationDelay: '2s' }}
     >
         <div
             className="flex flex-row items-center justify-start select-none cursor-pointer text-md leading-2"

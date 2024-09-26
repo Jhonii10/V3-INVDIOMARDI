@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
+import 'animate.css';
 import { Toaster } from "react-hot-toast";
 
 const quicksank = Quicksand({ subsets: ["latin"] });
