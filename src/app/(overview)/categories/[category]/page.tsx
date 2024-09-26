@@ -3,6 +3,7 @@ import { categories } from "@/models";
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 interface Props {
     params:{
@@ -30,12 +31,14 @@ export async function generateMetadata(
 
 export default function CategoryPage({params}:Props) {
 
-    const {category} = params;
+  const {category} = params;
+    
+  const path = `/images/categories/${category.replace(/\b\w/g, c => c.toUpperCase())}.png`;
+  
 
-    const path = `/images/categories/${category.replace(/\s+/g, '')}.png`;
-    const data = categories.find(item => item.categoria.toLowerCase() === category.toLowerCase())
+  const data = categories.find(item => item.categoria.toLowerCase() === category.toLowerCase())
 
-
+  if(!data){notFound()}
 
   return (
     <div className="pt-24">
