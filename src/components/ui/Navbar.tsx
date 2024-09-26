@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 import { IoMenuOutline, IoSearchOutline } from 'react-icons/io5'
 import { Options } from './Options';
 import { menuItem } from '@/models';
-import { useScrollDirection } from '@/hooks';
+import { useFirstVisit, useScrollDirection } from '@/hooks';
 import { usePathname } from 'next/navigation';
 import { IconLogo } from '../icons';
 
@@ -38,7 +38,7 @@ export const Navbar = () => {
       }, [scrolledToTop]);
 
    
-
+      const isFirstVisit = useFirstVisit();
 
   return (
     <header  className={clsx('fixed z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between  bg-[hsla(0,0%,100%,0.65)] transition-transform duration-500 ',{
@@ -47,8 +47,12 @@ export const Navbar = () => {
         'shadow-lg backdrop-blur-md': scrollDirection === 'up' && !scrolledToTop,
         'bg-transparent':scrolledToTop
     })}>
-        <div className='flex flex-row items-center justify-center'>
-            <Link href={'/'} className='font-bold text-base'>
+        <div className={clsx('flex flex-row items-center justify-center ',{
+            'animate__animated animate__bounceInLeft': isFirstVisit
+        })}
+            style={{ '-webkit-animation-fill-mode': 'none' } as React.CSSProperties}
+        >
+            <Link href={'/'} className='font-bold text-base '>
                 <IconLogo/>
             </Link>
             <ul className='m-0 md:ml-8 p-0 list-none hidden lg:flex  flex-row items-center justify-center '>
@@ -105,7 +109,9 @@ export const Navbar = () => {
             </ul>
         </div>
 
-        <div className='flex flex-row items-center justify-center '>
+        <div className={clsx('flex flex-row items-center justify-center',{
+            'animate__animated animate__bounceInRight':isFirstVisit
+        })}>
             <Link 
                 href={'tel:+573206795065'} 
                 className='hidden md:inline-block text-sm leading-[200%] text-black no-underline transition-colors duration-300 ease-0 '
