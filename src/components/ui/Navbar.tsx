@@ -38,7 +38,7 @@ export const Navbar = () => {
       }, [scrolledToTop]);
 
    
-      const isFirstVisit = useFirstVisit();
+      const isFirstVisit = useFirstVisit('Navbar');
 
   return (
     <header  className={clsx('fixed z-10 top-0 left-0 w-full h-24 px-6 lg:px-14 flex flex-row items-center justify-between  bg-[hsla(0,0%,100%,0.65)] transition-transform duration-500 ',{

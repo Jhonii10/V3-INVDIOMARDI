@@ -1,5 +1,6 @@
 'use client'
 import { useFirstVisit } from '@/hooks';
+import clsx from 'clsx';
 import React from 'react'
 
 export const MouseDown = () => {
@@ -11,10 +12,12 @@ export const MouseDown = () => {
             }
     }
 
-    const isFirstVisit = useFirstVisit();
+    const isFirstVisit = useFirstVisit('MouseDown');
 
   return (
-    <div className={`absolute bottom-4 left-4 z-2 max-sm:hidden animate__animated ${isFirstVisit && 'animate__fadeIn'} `}
+    <div className={clsx(`absolute bottom-4 left-4 z-2 max-sm:hidden `,{
+        'animate__animated animate__fadeIn': isFirstVisit
+    })}
         onClick={handleScroll}
         style={{ animationDelay: '2s' }}
     >

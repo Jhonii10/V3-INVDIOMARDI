@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 
-const useFirstVisit = (): boolean => {
+const useFirstVisit = (name:string): boolean => {
   const [isFirstVisit, setIsFirstVisit] = useState<boolean>(true);
 
   useEffect(() => {
-    const hasVisited = sessionStorage.getItem('hasVisited');
+    const hasVisited = sessionStorage.getItem(name);
     if (!hasVisited) {
       setIsFirstVisit(true);
-      sessionStorage.setItem('hasVisited', 'true');
+      sessionStorage.setItem(name, 'true');
     } else {
       setIsFirstVisit(false);
     }
-  }, []);
+  }, [name]);
 
   return isFirstVisit
 };
