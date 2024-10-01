@@ -16,7 +16,7 @@ const images = [
 
 export const Hero = () => {
   
-    const isFirstVisit = useFirstVisit();
+    const isFirstVisit = useFirstVisit('Hero');
 
     return (
         <div className="relative w-full min-h-[calc(100*5.5px)] lg:min-h-[calc(100*7.1px)] xl:min-h-screen flex flex-col items-start justify-center bg-[rgba(219,219,219,0.1)] py-24 lg:py-28">

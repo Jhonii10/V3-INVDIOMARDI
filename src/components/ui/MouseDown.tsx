@@ -12,7 +12,7 @@ export const MouseDown = () => {
             }
     }
 
-    const isFirstVisit = useFirstVisit();
+    const isFirstVisit = useFirstVisit('MouseDown');
 
   return (
     <div className={clsx(`absolute bottom-4 left-4 z-2 max-sm:hidden `,{
