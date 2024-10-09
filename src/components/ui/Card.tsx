@@ -11,7 +11,7 @@ export const Card = ({category , name }:Props) => {
     const path = `/images/categories/${category.replace(/\s+/g, '')}.png`;
 
   return (
-    <div className="rounded-lg bg-gray-100 p-8 hover:shadow-xl hover:z-[1] group ">
+    <div className="rounded-xl bg-gray-100 p-8 hover:shadow-[0_0_26px_0_rgba(0,0,0,0.25)] hover:z-[1] group ">
       <Link href={`/categories/${category.toLowerCase().replace(/\s+/g, '')}`}  >
           <div className='flex justify-center items-center '>
             <Image

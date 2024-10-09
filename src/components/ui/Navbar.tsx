@@ -50,7 +50,7 @@ export const Navbar = () => {
         <div className={clsx('flex flex-row items-center justify-center ',{
             'animate__animated animate__bounceInLeft': isFirstVisit
         })}
-            style={{ '-webkit-animation-fill-mode': 'none' } as React.CSSProperties}
+            style={{ WebkitAnimationFillMode: 'none' } as React.CSSProperties}
         >
             <Link href={'/'} className='font-bold text-base '>
                 <IconLogo/>
