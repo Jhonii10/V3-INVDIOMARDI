@@ -52,7 +52,7 @@ export const Navbar = () => {
         })}
             style={{ WebkitAnimationFillMode: 'none' } as React.CSSProperties}
         >
-            <Link href={'/'} className='font-bold text-base '>
+            <Link href={'/'} className='font-bold text-base'>
                 <IconLogo/>
             </Link>
             <ul className='m-0 md:ml-8 p-0 list-none hidden lg:flex  flex-row items-center justify-center '>
@@ -109,29 +109,41 @@ export const Navbar = () => {
             </ul>
         </div>
 
-        <div className={clsx('flex flex-row items-center justify-center',{
-            'animate__animated animate__bounceInRight':isFirstVisit
-        })}>
-            <Link 
-                href={'tel:+573206795065'} 
-                className='hidden md:inline-block text-sm leading-[200%] text-black no-underline transition-colors duration-300 ease-0 '
-                >
-                    +573206795065
+        <div
+            className={clsx('flex flex-row items-center justify-center', {
+                'animate__animated animate__bounceInRight': isFirstVisit,
+            })}
+            >
+            <Link
+                href={'tel:+573206795065'}
+                className='hidden md:inline-block text-sm leading-[200%] text-black no-underline transition-colors duration-300 ease-0'
+                aria-label="Llamar al número +573206795065"
+                role="link"
+            >
+                +573206795065
             </Link>
+            
             <button
                 className='relative flex flex-row items-center justify-center w-12 h-12 text-black transition-colors duration-[350ms] ease-0'
                 onClick={openSearch}
-                >
-                    {<IoSearchOutline size={24} />}
+                aria-label="Buscar"
+                role="button"
+                tabIndex={0}
+            >
+                <IoSearchOutline title={'search'} size={24} />
             </button>
             
-            <button 
+            <button
                 className="appearance-none border-0 p-0 cursor-pointer flex lg:hidden flex-row items-center justify-center w-12 h-12 bg-[var(--primary-color-300)] rounded-full text-black"
                 onClick={openSideMenu}
-                >
-                {<IoMenuOutline size={20} />}
+                aria-label="Abrir menú lateral"
+                role="button"
+                tabIndex={0}
+            >
+                <IoMenuOutline title={'menu'} size={20} />
             </button>
-        </div>
+            </div>
+
     </header>
   )
 }
