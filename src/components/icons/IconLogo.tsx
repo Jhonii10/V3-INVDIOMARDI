@@ -9,6 +9,7 @@ export const IconLogo = () => {
     viewBox="0 0 140 42"
     fill="none"
     >
+      <title>Logo</title>
         <rect width='100%' height="100%" fill="url(#pattern0_3_2)" />
         <defs>
             <pattern
