@@ -18,6 +18,7 @@ export * from './home/Hero'
 export * from './home/Feature'
 export * from './home/Jobs'
 export * from './home/Reviews'
+export * from './home/WhastappChat'
 
 // categories 
 export * from './categories/ListCard'
