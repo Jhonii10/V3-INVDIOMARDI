@@ -37,7 +37,7 @@ export const WhastappChat = () => {
   
         {/* Chat Modal */}
         {isOpen && (
-          <div className="fixed sm:absolute bottom-1 sm:bottom-16 right-0 w-full sm:w-80 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden">
+          <div className="fixed sm:absolute bottom-20 sm:bottom-16 right-0 w-full sm:w-80 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden">
             {/* Header con onda */}
             <div className="relative bg-green-500 p-4" style={{
               borderImageSource: "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 24 150 28\"%3E%3Cdefs%3E%3Cpath id=\"gentle-wave\" d=\"M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z\"%3E%3C/path%3E%3C/defs%3E%3Cg%3E%3Cuse xlink:href=\"%23gentle-wave\" x=\"30\" y=\"3\" fill=\"%23fff\"%3E%3C/use%3E%3C/g%3E%3C/svg%3E')",
@@ -66,6 +66,7 @@ export const WhastappChat = () => {
                 target='blank'
                 href={`https://api.whatsapp.com/send?phone=573135667699&text=${message}`}
                 className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+                onClick={toggleChat}
               >
                 Iniciar conversación
               </Link>
