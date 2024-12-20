@@ -9,6 +9,15 @@ const quicksank = Quicksand({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Inversiones Diomardi",
   description: "sitio web oficial de la importadora inversiones diomardi sas",
+  applicationName: 'Inversiones Diomardi',
+  openGraph: {
+    title: 'Inversiones Diomardi',
+    description: 'Importadora de productos al mayor y detal',
+    url: 'https://inversionesdiomardi-demo.vercel.app',
+    siteName: 'Inversiones Diomardi',
+    locale: 'es_ES',
+    type: 'website',
+  }
 };
 
 export default function RootLayout({
