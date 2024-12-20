@@ -17,8 +17,7 @@ export const WhastappChat = () => {
 
     const message = '¡Hola! Necesito asesoría Inversiones Diomardi';
 
-    const isFirstVisit = useFirstVisit('MouseDown');
-
+    const isFirstVisit = useFirstVisit('Whastapp');
   
     return (
       <div className={clsx("fixed bottom-4 right-4 z-50",{
