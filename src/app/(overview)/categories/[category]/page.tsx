@@ -1,4 +1,5 @@
-import { ButtonGetOutOfert, Earnings, Jobs } from "@/components";
+import { Earnings, Jobs } from "@/components";
+import ButtonGetCatalog from "@/components/ui/ButtonGetCatalog";
 import { categories } from "@/models";
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
@@ -17,11 +18,19 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   // read route params
   const category = params.category;
+  const categoryData = categories.find(
+    (item) => item.categoria.toLowerCase() === category.toLowerCase()
+  );
 
  
   return {
-    title: `Categoria | ${category}` ?? 'Categoria no encontrado',
-    description: "",
+    title: `Categoria | ${category}` || 'Categoria no encontrada',
+    description: categoryData?.Description || "Explora nuestra categoría de productos",
+    openGraph: {
+      title: categoryData?.categoria || 'Categoría',
+      description: categoryData?.Description || "Explora nuestra categoría de productos",
+      images: [`/images/categories/${category.replace(/\b\w/g, (c) => c.toUpperCase())}.png`],
+    },
 
   }
 
@@ -35,10 +44,12 @@ export default function CategoryPage({params}:Props) {
     
   const path = `/images/categories/${category.replace(/\b\w/g, c => c.toUpperCase())}.png`;
   
+  const data = categories.find(item => item.categoria.toLowerCase() === category.toLowerCase());
 
-  const data = categories.find(item => item.categoria.toLowerCase() === category.toLowerCase())
-
-  if(!data){notFound()}
+  if(!data)
+  {
+    notFound()
+  }
 
   return (
     <div className="pt-24">
@@ -72,7 +83,7 @@ export default function CategoryPage({params}:Props) {
         <span className="text-sm">*La disponibilidad de nuestro inventario está sujeta a existencias y rotación de ventas en cada una de nuestras sucursales.</span>
         </div>
         <div className="relative lg:absolute bottom-0 lg:bottom-[calc(77*7.74px*0.05)] right-0 lg:right-9 w-full lg:w-4/12 p-4 lg:p-0">
-            <ButtonGetOutOfert/>
+            <ButtonGetCatalog catalog={category}/>
         </div>
       </div>
       
