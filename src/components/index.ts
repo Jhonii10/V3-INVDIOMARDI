@@ -12,6 +12,7 @@ export * from './ui/Earnings';
 export * from './ui/TitleAndImage'
 export * from './ui/Search'
 export * from './ui/ParticlesContainer'
+export * from './ui/ButtonGetCatalog'
 
 // Home
 export * from './home/Hero'
