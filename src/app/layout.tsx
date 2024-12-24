@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Inversiones Diomardi',
     description: 'Importadora de productos al mayor y detal',
-    images:['/logo.svg', ],
+    images:['/images/logo.png'],
     url: 'https://inversionesdiomardi-demo.vercel.app',
     siteName: 'Inversiones Diomardi',
     locale: 'es_ES',
