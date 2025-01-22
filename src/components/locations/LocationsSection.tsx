@@ -18,20 +18,31 @@ export const LocationsSection = () => {
                 timeout: 5000,
                 maximumAge: 0
               }
+            
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
             navigator.geolocation.getCurrentPosition(
                 (position) => {
                     const { latitude, longitude } = position.coords;
 
                     const url = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${encodeURIComponent(direccion)}`;
+                    const mapsApp = `comgooglemaps://?saddr=${latitude},${longitude}&daddr=${encodeURIComponent(direccion)}&directionsmode=driving`;
+                    
 
-                    window.open(url,'_black')
+                    if (isMobile) {
+                        window.location.href = mapsApp;
+                    }else{
+                        window.open(url,'_black')
+                    }    
 
                 },(err)=>{
-                    toast.error('No se pudo obtener la ubicación. Asegúrate de habilitar la ubicación.')
+                    toast.error('No se pudo obtener tu ubicación. Mostrando solo la dirección.')
+                    window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(direccion)}`);
+                    
                 },options)
         }else{
             toast.error('Tu navegador no soporta geolocalización.')
+            window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(direccion)}`);
         }
 
     }
