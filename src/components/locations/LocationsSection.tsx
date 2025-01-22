@@ -14,8 +14,9 @@ export const LocationsSection = () => {
     const getRouter = (direccion:string)=>{
 
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-        if(isMobile){
+        if(isMobile || isSafari){
             return route.replace(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(direccion)}`)
         }
 
