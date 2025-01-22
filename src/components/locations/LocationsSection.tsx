@@ -2,11 +2,39 @@
 
 import { locationsRetailers, locationsWholesalers } from '@/models';
 import clsx from 'clsx';
-import Link from 'next/link';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 export const LocationsSection = () => {
+
     const [state, setState] = useState(true);
+
+    const getRouter = (direccion:string)=>{
+
+        if (navigator.geolocation) {
+
+            const options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+              }
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const { latitude, longitude } = position.coords;
+
+                    const url = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${encodeURIComponent(direccion)}`;
+
+                    window.open(url,'_black')
+
+                },(err)=>{
+                    toast.error('No se pudo obtener la ubicación. Asegúrate de habilitar la ubicación.')
+                },options)
+        }else{
+            toast.error('Tu navegador no soporta geolocalización.')
+        }
+
+    }
   return (
     <section>
     <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 md:py-16 lg:px-8">
@@ -34,51 +62,57 @@ export const LocationsSection = () => {
         </div>
         </div>
         
-        <div className='flex gap-4 flex-wrap justify-center items-center mt-8'>
+        <div className='flex gap-4 flex-wrap justify-center mt-8'>
             {
                 state ? 
                 locationsWholesalers.map((item)=>(
-                    <div key={item.tienda} className='border p-6 shadow-md rounded-lg w-72'>
-                            <h3 className="text-lg font-medium">
-                            {item.tienda}
-                            </h3>
-                            <h3>
-                            {item.direcion}
-                            </h3>
-                            <p className="mt-4 text-sm text-gray-500">
-                            {item.horarios} 
-                            </p>
-                            <div className="mt-6 sm:text-right gap-2 flex justify-end">
-
-                            
-                            <Link
-                                href={''}
-                                className="inline-block rounded-lg bg-[var(--primary-color-300)] px-5 py-3 text-sm font-medium text-black"
-                            >
-                                Como llegar
-                            </Link>
-                            </div>
+                    <div
+                        key={item.tienda}
+                        className="relative flex flex-col justify-between border border-gray-200 shadow-lg rounded-lg p-6 bg-white w-full sm:w-80    "
+                    >
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-800 truncate capitalize">
+                          {item.tienda}
+                        </h3>
+                        <p className="text-sm text-gray-700 mt-1 break-words">
+                          {item.direcion}
+                        </p>
+                        <p className='text-sm mt-2'>Telefono: {item.telefono}</p>
+                        <p className="mt-3 text-sm text-gray-500">{item.horarios}</p>
+                      </div>
+                      <div className="mt-6 flex justify-end">
+                        <button
+                          onClick={() => getRouter(item.ubicacion)}
+                          className="inline-block rounded-lg bg-[var(--primary-color-300)] px-5 py-3 text-sm font-medium text-black hover:bg-[var(--primary-color-400)] transition-transform transform hover:scale-105"
+                        >
+                          Como llegar
+                        </button>
+                      </div>
                     </div>
                 ))
                 :locationsRetailers.map((item)=>(
-                    <div key={item.tienda} className='border p-6 shadow-md rounded-lg w-72'>
-                            <h3 className="text-lg font-semibold capitalize ">
-                            {item.tienda}
-                            </h3>
-                            <p className='text-sm mt-1'>
-                            {item.direcion}
-                            </p>
-                            <p className="mt-2 text-sm text-gray-500">
-                            {item.horarios} 
-                            </p>
-                            <div className="mt-4 sm:text-right gap-2 flex justify-end">
-                            <Link
-                                href={''}
-                                className=" rounded-lg bg-[var(--primary-color-300)] px-5 py-3 text-sm font-medium text-black"
-                            >
-                                Como llegar
-                            </Link>
-                            </div>
+                    <div
+                        key={item.tienda}
+                        className="relative flex flex-col justify-between border border-gray-200 shadow-lg rounded-lg p-6 bg-white w-full sm:w-80    "
+                    >
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-800 truncate capitalize">
+                          {item.tienda}
+                        </h3>
+                        <p className="text-sm text-gray-700 mt-1 break-words">
+                          {item.direcion}
+                        </p>
+                        <p className='text-sm mt-2'>Telefono: {item.telefono}</p>
+                        <p className="mt-3 text-sm text-gray-500">{item.horarios}</p>
+                      </div>
+                      <div className="mt-6 flex justify-end">
+                        <button
+                          onClick={() => getRouter(item.ubicacion)}
+                          className="inline-block rounded-lg bg-[var(--primary-color-300)] px-5 py-3 text-sm font-medium text-black hover:bg-[var(--primary-color-400)] transition-transform transform hover:scale-105"
+                        >
+                          Como llegar
+                        </button>
+                      </div>
                     </div>
                 ))
             }

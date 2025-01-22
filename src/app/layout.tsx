@@ -8,17 +8,22 @@ const quicksank = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Inversiones Diomardi",
-  description: "sitio web oficial de la importadora inversiones diomardi sas",
-  applicationName: 'Inversiones Diomardi',
+  description: "Sitio web oficial de la importadora Inversiones Diomardi S.A.S.",
+  applicationName: "Inversiones Diomardi",
+  metadataBase: new URL("https://inversionesdiomardi-demo.vercel.app"), // URL base configurada
+  alternates: {
+    languages: {
+      es: "español",
+    },
+  },
   openGraph: {
-    title: 'Inversiones Diomardi',
-    description: 'Importadora de productos al mayor y detal',
-    images:['/images/logo.png'],
-    url: 'https://inversionesdiomardi-demo.vercel.app',
-    siteName: 'Inversiones Diomardi',
-    locale: 'es_ES',
-    type: 'website',
-  }
+    title: "Inversiones Diomardi",
+    description: "Importadora de productos al mayor y detal",
+    images: ["/images/logo.png"],
+    url: "https://inversionesdiomardi-demo.vercel.app",
+    siteName: "Inversiones Diomardi",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={quicksank.className}>
       <Toaster
         position="bottom-right"
