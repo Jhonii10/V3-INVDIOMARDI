@@ -2,24 +2,29 @@
 
 import { locationsRetailers, locationsWholesalers } from '@/models';
 import clsx from 'clsx';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 
 export const LocationsSection = () => {
 
     const [state, setState] = useState(true);
+    const route = useRouter();
 
     const getRouter = (direccion:string)=>{
 
         if (navigator.geolocation) {
 
+            
+            
             const options = {
                 enableHighAccuracy: true,
                 timeout: 5000,
                 maximumAge: 0
-              }
+            }
             
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
             navigator.geolocation.getCurrentPosition(
                 (position) => {
@@ -30,6 +35,7 @@ export const LocationsSection = () => {
                     
 
                     if (isMobile) {
+                        
                         window.location.href = mapsApp;
                     }else{
                         window.open(url,'_black')
@@ -37,6 +43,9 @@ export const LocationsSection = () => {
 
                 },(err)=>{
                     toast.error('No se pudo obtener tu ubicación. Mostrando solo la dirección.')
+                    if (isSafari) {
+                        return route.replace(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(direccion)}`)
+                    }
                     window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(direccion)}`);
                     
                 },options)
