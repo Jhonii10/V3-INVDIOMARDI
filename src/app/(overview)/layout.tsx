@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import { Footer, Navbar, Search, Sidebar } from "@/components";
 
 

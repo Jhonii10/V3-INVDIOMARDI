@@ -21,16 +21,21 @@ export const Navbar = () => {
     const openSearch = useUiStore(state => state.openSearch)
     const pathname = usePathname();
 
+    
+
     const scrollDirection = useScrollDirection({initialDirection:'down'});
-    const [scrolledToTop, setScrolledToTop] = useState(window.scrollY < 25);
+ 
+    const [scrolledToTop, setScrolledToTop] = useState(true);
 
 
     const handleScroll = () => {
         setScrolledToTop(window.scrollY < 25);
-      };
+    };
     
       useEffect(() => {
-    
+
+        handleScroll();
+
         window.addEventListener('scroll', handleScroll);
     
         return () => {
