@@ -21,15 +21,21 @@ export const Navbar = () => {
     const openSearch = useUiStore(state => state.openSearch)
     const pathname = usePathname();
 
+    
+
     const scrollDirection = useScrollDirection({initialDirection:'down'});
+ 
     const [scrolledToTop, setScrolledToTop] = useState(true);
+
 
     const handleScroll = () => {
         setScrolledToTop(window.scrollY < 25);
-      };
+    };
     
       useEffect(() => {
-    
+
+        handleScroll();
+
         window.addEventListener('scroll', handleScroll);
     
         return () => {
@@ -45,7 +51,7 @@ export const Navbar = () => {
         'transform -translate-y-24 shadow-lg backdrop-blur-md': scrollDirection === 'down' && !scrolledToTop,
         'transform translate-y-0 shadow-none': scrollDirection === 'up' && scrolledToTop,
         'shadow-lg backdrop-blur-md': scrollDirection === 'up' && !scrolledToTop,
-        'bg-transparent':scrolledToTop
+        'bg-transparent':scrolledToTop,
     })}>
         <div className={clsx('flex flex-row items-center justify-center ',{
             'animate__animated animate__bounceInLeft': isFirstVisit
