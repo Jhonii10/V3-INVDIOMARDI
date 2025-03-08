@@ -67,7 +67,7 @@ export const categories = [
 
     },
     {
-        Description:'ccesorios y dispositivos electrónicos para negocios y distribuidores. Encuentre productos de alta rotación como audífonos, cargadores y gadgets tecnológicos con disponibilidad para compras en volumen.',
+        Description:'Accesorios y dispositivos electrónicos para negocios y distribuidores. Encuentre productos de alta rotación como audífonos, cargadores y gadgets tecnológicos con disponibilidad para compras en volumen.',
         route:'Tecnologia',
         name:'Tecnologia'
 
