@@ -1,20 +1,23 @@
 export const  bestCategories = [
   {
-    category:'Hogar',
-    name:`Surtido de productos para el hogar, ideales para abastecer tiendas y negocios. Ofrecemos
+    name:'Hogar',
+    description:`Surtido de productos para el hogar, ideales para abastecer tiendas y negocios. Ofrecemos
     artículos esenciales como utensilios de cocina, decoración y organización, con opciones
-    variadas y precios competitivos para compras en volumen.`
+    variadas y precios competitivos para compras en volumen.`,
+    route:'Hogar'
   },
   {
-    category:'Jugueteria',
-    name:`Amplia variedad de juguetes para distribuidores y comercios. Desde opciones educativas 
+    name:'Jugueteria',
+    description:`Amplia variedad de juguetes para distribuidores y comercios. Desde opciones educativas 
     hasta las últimas tendencias, ofrecemos stock en grandes cantidades para negocios
-    que buscan variedad y calidad en su inventario.`
+    que buscan variedad y calidad en su inventario.`,
+    route:'Jugueteria'
   },
   {
-    category:'Ferreteria',
-    name:`Herramientas y suministros de ferretería en grandes cantidades. Contamos con productos
+    name:'Ferreteria',
+    description:`Herramientas y suministros de ferretería en grandes cantidades. Contamos con productos
     esenciales para construcción, mantenimiento y bricolaje, garantizando
-    calidad y precios competitivos para negocios y distribuidores.`
-  }
+    calidad y precios competitivos para negocios y distribuidores.`,
+    route:'Ferreteria'
+  },
 ]

@@ -3,34 +3,44 @@ import Link from 'next/link';
 import React from 'react'
 
 interface Props {
-    category: string;
     name: string;
+    route: string;
+    description: string;
 }
-export const Card = ({category , name }:Props) => {
 
-    const path = `/images/categories/${category.replace(/\s+/g, '')}.png`;
+const sanitizeRoute = (route: string) => {
+  return route.trim().toLowerCase().replace(/\s+/g, '-');
+};
 
+export const Card = ({ name , route , description }:Props) => {
+
+    const sanitizedRoute = sanitizeRoute(route);
+    const path = `/images/categories/${sanitizedRoute.replace(/\b\w/g, c => c.toUpperCase())}.png`;
+    const href = `/categories/${sanitizedRoute}`;
+    
+    console.log(path);
+    
   return (
     <div className="rounded-xl bg-gray-100 p-8 hover:shadow-[0_0_26px_0_rgba(0,0,0,0.25)] hover:z-[1] group ">
-      <Link href={`/categories/${category.toLowerCase().replace(/\s+/g, '')}`}  >
+      <Link href={href} title={`Explorar categoría ${name}`} >
           <div className='flex justify-center items-center '>
             <Image
                 width={500}
                 height={500}
-                alt={category}
+                alt={name}
                 src={path}
                 className="transform transition-transform duration-500 ease-in-out group-hover:scale-105"
-            
+  
             />
           </div>
         <div className="mt-2 text-left">
           <div
             className=" text-lg w-full text-black font-bold"
           >
-            {category.charAt(0).toUpperCase() + category.slice(1)}
+            {name.charAt(0).toUpperCase() + name.slice(1)}
           </div>
           <div className="py-2 w-full overflow-hidden text-ellipsis text-gray-600 leading-100 text-base max-h-14 whitespace-nowrap ">
-            {name.charAt(0).toUpperCase() + name.slice(1)}
+            {description.charAt(0).toUpperCase() + description.slice(1)}
           </div>
         </div>
       </Link>

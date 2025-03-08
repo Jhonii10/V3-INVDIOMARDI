@@ -10,7 +10,7 @@ export default function ButtonGetCatalog({catalog}:{catalog:string}) {
   return (
     <>
       <Link 
-        href={`https://api.whatsapp.com/send?phone=573135667699&text=${message}`}
+        href={`https://api.whatsapp.com/send?phone=573164682528&text=${message}`}
         target='blank' 
         className='bg-green-500 rounded-full p-2 flex flex-row hover:bg-green-600 text-white hover:font-semibold text-center items-center justify-center gap-2'
         >

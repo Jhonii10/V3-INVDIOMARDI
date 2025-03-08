@@ -10,7 +10,7 @@ export const ListCard = () => {
                 <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
                     {
                     categories?.map(
-                            category => <Card key={category.name} category={category.name} name={category.Description}/>
+                            category => <Card key={category.name} name={category.name} route={category.route as string} description={category.Description} />
                             
                         )
                     
