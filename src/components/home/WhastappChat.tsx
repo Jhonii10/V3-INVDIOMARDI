@@ -63,7 +63,7 @@ export const WhastappChat = () => {
             <div className="p-4 bg-white text-center items-center">
               <Link
                 target='blank'
-                href={`https://api.whatsapp.com/send?phone=573135667699&text=${message}`}
+                href={`https://api.whatsapp.com/send?phone=573164682528&text=${message}`}
                 className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
                 onClick={toggleChat}
               >

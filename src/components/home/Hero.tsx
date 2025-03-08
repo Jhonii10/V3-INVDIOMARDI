@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import { Slider } from '../ui/Slider';
-import { ButtonGetOutOfert } from '../ui/ButtonGetOutOfert';
 import { MouseDown } from '../ui/MouseDown';
 import Link from 'next/link';
 import { useFirstVisit } from '@/hooks';
@@ -31,28 +30,26 @@ export const Hero = () => {
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:text-left ml-0 lg:ml-24 flex flex-col justify-center">
-                        <h1 className={`font-bold text-2xl lg:text-5xl text-center lg:text-left animate__animated ${isFirstVisit ? 'animate__zoomInDown' : ''}`} style={{ animationDelay: '0.5s' }}>
-                            Importadora de productos 
-                            <br />
-                            al mayor y detal
+                        <h1 className={`font-bold text-2xl lg:text-4xl text-center lg:text-left text-[#003E4A] animate__animated ${isFirstVisit ? 'animate__zoomInDown' : ''}`} style={{ animationDelay: '0.5s' }}>
+                            ¿Buscas productos al por mayor, precios bajos y proveedores confiables para tu negocio?
                         </h1>
                         <p className={`mt-6 text-lg leading-8 text-gray text-center lg:text-left animate__animated ${isFirstVisit ? 'animate__fadeInUp' : ''}`} style={{ animationDelay: '1s' }}>
-                            Deleite a sus clientes con productos sostenibles de calidad, a precios asequibles
+                        En <span className="font-semibold">Inversiones Diomardi</span> contamos con más de <span className="font-semibold">30 años de experiencia</span>, importamos productos de calidad y los ofrecemos a precios al por mayor sin intermediarios.
                         </p>
                         
                         <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"/>
 
-                        <div className={`animate__animated ${isFirstVisit ? 'animate__fadeIn' : ''}`} style={{ animationDelay: '1.5s' }}>
+                        {/* <div className={`animate__animated ${isFirstVisit ? 'animate__fadeIn' : ''}`} style={{ animationDelay: '1.5s' }}>
                             <ButtonGetOutOfert />
                             <div className='border border-grey-100 my-10'/>
-                        </div> 
+                        </div>  */}
                         <div className="flex justify-center items-center lg:justify-start"> 
                             <Link 
-                                className={`bg-[var(--primary-color-400)] hover:bg-[var(--primary-color-500)] font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline animate__animated ${isFirstVisit ? 'animate__bounceIn' : ''}`} 
+                                className={`bg-[#003E4A] hover:bg-[#002e37] text-white text-center font-bold py-5 px-4 rounded-full focus:outline-none focus:shadow-outline max-w-lg animate__animated ${isFirstVisit ? 'animate__bounceIn' : ''}`} 
                                 href='/categories' 
                                 style={{ animationDelay: '2s' }}
                             >
-                                Ver todas nuestras categorias
+                                Explora nuestro catálogo y cotiza sin compromiso hoy
                             </Link>
                         </div>
                     </div>
