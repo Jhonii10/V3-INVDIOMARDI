@@ -10,6 +10,7 @@ import { menuItem } from '@/models';
 import { useFirstVisit, useScrollDirection } from '@/hooks';
 import { usePathname } from 'next/navigation';
 import { IconLogo } from '../icons';
+import Image from 'next/image';
 
 
 
@@ -59,7 +60,12 @@ export const Navbar = () => {
             style={{ WebkitAnimationFillMode: 'none' } as React.CSSProperties}
         >
             <Link href={'/'} className='font-bold text-base'>
-                <IconLogo/>
+                <Image
+                src="/images/logo.png    "
+                alt="Logo"
+                width={140}
+                height={42}
+                />
             </Link>
             <ul className='m-0 md:ml-8 p-0 list-none hidden lg:flex  flex-row items-center justify-center '>
                 <li 
@@ -121,12 +127,12 @@ export const Navbar = () => {
             })}
             >
             <Link
-                href={'tel:+573206795065'}
+                href={'tel:+573164682528'}
                 className='hidden md:inline-block text-sm leading-[200%] text-black no-underline transition-colors duration-300 ease-0'
-                aria-label="Llamar al número +573206795065"
+                aria-label="Llamar al número +573164682528"
                 role="link"
             >
-                +573206795065
+                +573164682528
             </Link>
             
             <button

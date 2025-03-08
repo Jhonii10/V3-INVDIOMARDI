@@ -1,21 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import { Card } from './Card'
+import { bestCategories } from '@/models'
 
-const  bestCategories = [
-  {
-    category:'Hogar',
-    name:'Si estás pensando en remodelar y agregar nuevos estilos en la decoración de tu hogar u oficina, el lugar ideal para encontrar: portarretratos, espejos, cuadros decorativos, floreros, adornos de cerámica, cortinas, alfombras y mucho más.'
-  },
-  {
-    category:'Jugueteria',
-    name:'Regálale a los más pequeños un mundo lleno de creatividad con nuestros juguetes para niñas, niños, bebés y enséñales de una forma divertida a aprender con nuestros juguetes didácticos o educativos.'
-  },
-  {
-    category:'Cocina',
-    name:'Cocinar es un arte en el que necesitas las herramientas perfectas para conquistar el paladar de tus seres queridos. Encuentra sartenes, ollas, tablas para picar y mucho más.'
-  }
-]
 
 
 export const Testimonials = () => {

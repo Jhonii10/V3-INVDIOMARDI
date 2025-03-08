@@ -9,6 +9,7 @@ import { RedesSociales } from './RedesSociales'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { IconLogo } from '../icons'
+import Image from 'next/image'
 
 export const Footer = () => {
 
@@ -19,11 +20,15 @@ export const Footer = () => {
       <div className="flex flex-col sm:flex-row justify-between gap-4">
         <div>
           <div className="flex justify-center text-teal-600 sm:justify-start">
-            <IconLogo/>
+            <Image
+                src="/images/logo.png    "
+                alt="Logo"
+                width={140}
+                height={42}
+            />
           </div>
           <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            consequuntur amet culpa cum itaque neque.
+          En Inversiones Diomardi contamos con más de 30 años de experiencia, importando productos de calidad.
           </p>
           <ul className="mt-8 flex justify-center gap-4 sm:justify-start md:gap-8">
             <RedesSociales/>
@@ -75,7 +80,7 @@ export const Footer = () => {
                   href={'tel:+573206795065'} 
                 >
                   <FiPhone  className="h-5 w-5 shrink-0 text-gray-900" />
-                  <span className="flex-1 text-gray-700">+573206795065</span>
+                  <span className="flex-1 text-gray-700">+573164682528</span>
                 </Link>
               </li>
               <li className="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
