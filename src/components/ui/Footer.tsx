@@ -21,10 +21,11 @@ export const Footer = () => {
         <div>
           <div className="flex justify-center text-teal-600 sm:justify-start">
             <Image
-                src="/images/logo.png    "
+                src="/images/logo.png"
                 alt="Logo"
                 width={140}
                 height={42}
+                priority
             />
           </div>
           <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
