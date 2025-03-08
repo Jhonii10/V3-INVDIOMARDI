@@ -18,17 +18,17 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   // read route params
   const category = params.category;
-  const categoryData = categories.find(
-    (item) => item.categoria.toLowerCase() === category.toLowerCase()
+  const data = categories.find(
+    (item) => item.route?.toLowerCase() === category.toLowerCase()
   );
 
  
   return {
-    title: `Categoria | ${category}` || 'Categoria no encontrada',
-    description: categoryData?.Description || "Explora nuestra categoría de productos",
+    title: `Categoria - ${data?.name}` || 'Categoria no encontrada',
+    description: data?.Description || "Explora nuestra categoría de productos",
     openGraph: {
-      title: categoryData?.categoria || 'Categoría',
-      description: categoryData?.Description || "Explora nuestra categoría de productos",
+      title: data?.name || 'Categoría',
+      description: data?.Description || "Explora nuestra categoría de productos",
       images: [`/images/categories/${category.replace(/\b\w/g, (c) => c.toUpperCase())}.png`],
     },
 
@@ -43,8 +43,11 @@ export default function CategoryPage({params}:Props) {
   const {category} = params;
     
   const path = `/images/categories/${category.replace(/\b\w/g, c => c.toUpperCase())}.png`;
+
+  console.log('path',path);
   
-  const data = categories.find(item => item.categoria.toLowerCase() === category.toLowerCase());
+  
+  const data = categories.find(item => item.route?.toLowerCase() === category.toLowerCase());
 
   if(!data)
   {
@@ -53,7 +56,7 @@ export default function CategoryPage({params}:Props) {
 
   return (
     <div className="pt-24">
-      <div className={`relative flex flex-col justify-between min-h-[calc(77*7.74px)] bg-[#f6f6f7] p-4`}>
+      <div className={`relative flex flex-col justify-between min-h-[calc(100vh-96px)] bg-[#f6f6f7] p-4`}>
         <section className="relative z-[1] max-w-sm text-lg mb-4">
         <div className="text-left">
             <Link 
@@ -64,7 +67,7 @@ export default function CategoryPage({params}:Props) {
                 Categorias
             </Link>
         </div>
-        <h1 className="capitalize mt-4 text-2xl font-bold mb-0 md:mb-4 ">{category}</h1>
+        <h1 className="capitalize mt-4 text-2xl font-bold mb-0 md:mb-4 ">{data.name}</h1>
         <p className="hidden lg:block ">{data?.Description}</p>
         </section>
         <div className="relative lg:absolute top-0 left-0 lg:left-12 w-full  lg:w-[calc(100%-2.5rem*2)] xl:w-[calc(100%-3.75rem*2)] pt-[100%] lg:p-0 h-full z-0">

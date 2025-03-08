@@ -15,7 +15,7 @@ export const Testimonials = () => {
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
             {
               bestCategories?.map((item , index) => (
-                <Card category={item.category} name={item.name} key={`${item.category}+${index}`}/>
+                <Card route={item.route} name={item.name} key={`${item.name}+${index}`} description={item.description}/>
               ))
             }
           </div>

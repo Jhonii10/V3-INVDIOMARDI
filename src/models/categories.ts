@@ -1,74 +1,75 @@
 export const categories = [
     {
-        Description:'Si estás pensando en remodelar y agregar nuevos estilos en la decoración de tu hogar u oficina, el lugar ideal para encontrar: portarretratos, espejos, cuadros decorativos, floreros, adornos de cerámica, cortinas, alfombras y mucho más.',
-        categoria:'Hogar',
+        Description:'Surtido de productos para el hogar, ideales para abastecer tiendas y negocios. Ofrecemos artículos esenciales como utensilios de cocina, decoración y organización, con opciones variadas y precios competitivos para compras en volumen.',
+        route:'Hogar',
         name:'Hogar'
 
     },
     {
-        Description:'Regálale a los más pequeños un mundo lleno de creatividad con nuestros juguetes para niñas, niños, bebés y enséñales de una forma divertida a aprender con nuestros juguetes didácticos o educativos.',
-        categoria:'Jugueteria',
+        Description:'Amplia variedad de juguetes para distribuidores y comercios. Desde opciones educativas hasta las últimas tendencias, ofrecemos stock en grandes cantidades para negocios que buscan variedad y calidad en su inventario.',
+        route:'Jugueteria',
         name:'Jugueteria'
 
     },
     {
-        Description:'Para el uso diario, en tu hogar y oficina encuentra: copas, tazas, vasos, envases, vajillas, servilletas, platos, cubiertos, depósitos plásticos y más.',
-        categoria:'Cristaleria',
-        name:'Cristaleria'
-
-    },
-    {
-        Description:'Comienza esos proyectos de hogar y ten el jardín de tus sueños con nuestros productos de jardinería y ferretería.',
-        categoria:'Ferreteria',
+        Description:'Herramientas y suministros de ferretería en grandes cantidades. Contamos con productos esenciales para construcción, mantenimiento y bricolaje, garantizando calidad y precios competitivos para negocios y distribuidores.',
+        route:'Ferreteria',
         name:'Ferreteria'
 
     },
     {
-        Description:'Lo mejores productos para el cuidado y limpieza del hogar u oficinas como: limpiadores, jabones, desinfectantes, trapeadores, paños de microfibra y mucho más. ¡Visita tu tienda más cercana!',
-        categoria:'Limpieza',
-        name:'Limpieza'
+        Description:' Decoraciones, luces y artículos navideños para temporada alta. Ofrecemos una selección completa de productos para abastecer tiendas y comercios con artículos festivos de alta demanda.',
+        route:'Navidad',
+        name:'Navidad'
 
     },
     {
-        Description:'Sabemos lo importante que es tu mascota para ti, por eso también encuentras, los mejores productos para su cuidado: juguetes, cama, ropa, collares, correas, peines, comederos, comida, shampoo, jabones, y mucho más',
-        categoria:'Mascotas',
+        Description:'Material escolar y de oficina para distribuidores y mayoristas. Encuentre cuadernos, mochilas, colores y más en grandes cantidades, con opciones de calidad para abastecer negocios de papelería y comercio educativo.',
+        route:'Escolar',
+        name:'Escolar'
+
+    },
+
+    {
+        Description:'Decoraciones, luces y artículos navideños para temporada alta. Ofrecemos una selección completa de productos para abastecer tiendas y comercios con artículos festivos de alta demanda.',
+        route:'Expresion-social',
+        name:'Expresion Social'
+
+    },
+    {
+        Description:'Suministros esenciales para empresas y distribuidores. Desde empaques hasta insumos generales, ofrecemos soluciones en volumen para distintos sectores comerciales y mayoristas.',
+        route:'Insumos',
+        name:'Insumos'
+
+    },
+    {
+        Description:'Accesorios de moda con diseños variados y stock en volumen. Encuentre anillos, collares, pulseras y más, ideales para distribuidores y tiendas que buscan variedad y precios competitivos en bisutería.',
+        route:'Bisuteria',
+        name:'Bisuteria'
+
+    },
+    {
+        Description:'Bolsos, mochilas y carteras para tiendas y distribuidores. Productos funcionales y de diseño moderno con opciones de alta rotación para abastecer el sector de marroquinería.',
+        route:'Marroquineria',
+        name:'Marroquineria'
+
+    },
+    {
+        Description:'Maquillaje, fragancias y productos de cuidado personal en volumen. Contamos con una oferta variada para tiendas y distribuidores que buscan abastecer su inventario con cosméticos de alta demanda.',
+        route:'Cosmeticos',
+        name:'Cosmeticos'
+
+    },
+    {
+        Description:'Accesorios y productos para mascotas en grandes cantidades. Desde juguetes hasta alimentación, ofrecemos stock variado para veterinarias, pet shops y distribuidores especializados.',
+        route:'Mascotas',
         name:'Mascotas'
 
     },
     {
-        Description:'Cocinar es un arte en el que necesitas las herramientas perfectas para conquistar el paladar de tus seres queridos. Encuentra sartenes, ollas, tablas para picar, temporizadores y mucho más.',
-        categoria:'Cocina',
-        name:'Cocina'
-
-    },
-    {
-        Description:'Organizar tus fiestas y sorprender a los que más quieres es muy fácil con nuestra variedad en decoración para cumpleaños, globos, empaques de regalo, tarjetas, chongas, y mucho más.',
-        categoria:'Fiesta',
-        name:'Fiesta'
-
-    },
-    {
-        Description:'Juguetes, coches, biberones, alimentos, toallas húmedas, pañales, ropa y todo lo que necesitas para el cuidado de tu bebé lo puedes encontrar.',
-        categoria:'Bebe',
-        name:'Bebe'
-
-    },
-    {
-        Description:'Variedad de alimentos, bebidas, snacks para tu hogar u oficina, como: dulces, chocolates, galletas, fritos, enlatados, gaseosas y más para complementar tu comida o darte gusto.',
-        categoria:'Comida',
-        name:'Comida'
-
-    },
-    {
-        Description:'Encuentra todo en papelería y material para oficina a excelentes precios y con la mejor calidad. Tenemos para ti lápices, lapiceros, colores, marcadores, engrapadoras, pegamento, páginas, cartulinas, agendas, carpetas, cuadernos, y mucho más.',
-        categoria:'Oficina',
-        name:'Oficina'
-
-    },
-    {
-        Description:'Somos el aliado perfecto para ti con nuestros productos de salud y belleza. Encuentra mascarillas, desodorantes, espejos faciales y más productos para el cuidado de la piel.',
-        categoria:'Saludybelleza',
-        name:'Salud y belleza'
+        Description:'ccesorios y dispositivos electrónicos para negocios y distribuidores. Encuentre productos de alta rotación como audífonos, cargadores y gadgets tecnológicos con disponibilidad para compras en volumen.',
+        route:'Tecnologia',
+        name:'Tecnologia'
 
     },
    ]
