@@ -61,10 +61,11 @@ export const Navbar = () => {
         >
             <Link href={'/'} className='font-bold text-base'>
                 <Image
-                src="/images/logo.png    "
+                src="/images/logo.png"
                 alt="Logo"
                 width={140}
                 height={42}
+                priority
                 />
             </Link>
             <ul className='m-0 md:ml-8 p-0 list-none hidden lg:flex  flex-row items-center justify-center '>
