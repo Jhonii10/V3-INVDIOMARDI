@@ -8,7 +8,7 @@ const quicksank = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Inversiones Diomardi",
-  description: "Sitio web oficial de la importadora Inversiones Diomardi S.A.S.",
+  description: "¿Buscas productos al por mayor, precios bajos y proveedores confiables para tu negocio? En Inversiones Diomardi contamos con más de 30 años de experiencia, importamos productos de calidad y los ofrecemos a precios al por mayor sin intermediarios.",
   applicationName: "Inversiones Diomardi",
   metadataBase: new URL("https://inversionesdiomardi-demo.vercel.app"), // URL base configurada
   alternates: {
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Inversiones Diomardi",
-    description: "Importadora de productos al mayor y detal",
-    images: ["/images/logo.png"],
+    description: "¿Buscas productos al por mayor, precios bajos y proveedores confiables para tu negocio? En Inversiones Diomardi contamos con más de 30 años de experiencia, importamos productos de calidad y los ofrecemos a precios al por mayor sin intermediarios.",
+    images: ["/logo.svg"],
     url: "https://inversionesdiomardi-demo.vercel.app",
     siteName: "Inversiones Diomardi",
     type: "website",
