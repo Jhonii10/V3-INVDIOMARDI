@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Inversiones Diomardi",
     description: "¿Buscas productos al por mayor, precios bajos y proveedores confiables para tu negocio? En Inversiones Diomardi contamos con más de 30 años de experiencia, importamos productos de calidad y los ofrecemos a precios al por mayor sin intermediarios.",
-    images: ["/logo.svg"],
+    images: ["/images/logo.png"],
     url: "https://inversionesdiomardi-demo.vercel.app",
     siteName: "Inversiones Diomardi",
     type: "website",
