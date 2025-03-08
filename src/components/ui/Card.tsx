@@ -18,7 +18,6 @@ export const Card = ({ name , route , description }:Props) => {
     const path = `/images/categories/${sanitizedRoute.replace(/\b\w/g, c => c.toUpperCase())}.png`;
     const href = `/categories/${sanitizedRoute}`;
     
-    console.log(path);
     
   return (
     <div className="rounded-xl bg-gray-100 p-8 hover:shadow-[0_0_26px_0_rgba(0,0,0,0.25)] hover:z-[1] group ">
